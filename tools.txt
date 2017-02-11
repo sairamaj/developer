@@ -1,0 +1,9 @@
+Visual studio
+	Resharper
+
+Windows
+	SlickRun
+	find
+	where
+
+
