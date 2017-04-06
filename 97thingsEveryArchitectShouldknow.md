@@ -13,5 +13,20 @@ A great software architect needs master both sides of the architect's coin: busi
      * Approach these events as conversations - not as confrontations.
      * Approach these conversations only after you've got your altitude right.
      * Use these as opportunities to set mutually agreed-upon goals.
-     
+4. Communication is King: Clarity and Leadership, its Humble Servants
+   * Being clear and concise in the way you communicate your our ideas is vital to the success of any software project.
+   * Keep things as simple as possible at the start of a project, and by all means do not start writing lengthy word documents.
+   * Use tools like Visio to create simple diagrams to convey your thoughts.
+   * Informal white board meetings (have a digital camera)
+5. Application Architecture determines application performance
+6. Seek the value in requested capabilities
+   * architects focus on customer needs , helping the customers to answer the "why"
+7. Stand Up!
+   * If you're in any situation where you are talking to more than one person about your guidance, stand up.
+8. Everything will ultimately fail.
+  * Accept the failures will happen, you have the ability to design your system's reaction to specific failures.
+9. You're negotiating more often than you think
+10. Quantify
+  * "Fast" is not a requirement.
+
 
