@@ -6,8 +6,11 @@
 * __D__ enial of service  __Availability__
 * __E__ levation of privielge(ensure that the user cannot elevate his/her role to a higher privilege one) __Authorization__
 
-## [How to do thread modelling](https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2F9%2F3%2F5%2F935520EC-D9E2-413E-BEA7-0B865A79B18C%2FIntroduction_to_Threat_Modeling.ppsx&usg=AFQjCNGCJ0b_lChS6PW0tiWTv_kYAviOAw&sig2=XAWXdJrgQtjWY6KPO3ejhA)
+## [How to do thread modelling](https://download.microsoft.com/download/9/3/5/935520EC-D9E2-413E-BEA7-0B865A79B18C/Introduction_to_Threat_Modeling.ppsx)
 
+https://download.microsoft.com/download%2F9%2F3%2F5%2F935520EC-D9E2-413E-BEA7-0B865A79B18C%2FIntroduction_to_Threat_Modeling.ppsx&usg=AFQjCNGCJ0b_lChS6PW0tiWTv_kYAviOAw&sig2=4nLNmd71ZkcarJHE0cvDYw
+
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi3_qj1y5rTAhVC7GMKHZbPD0UQFggeMAA&url=
 ## Resources
 * [OWASP](https://www.owasp.org/index.php/Threat_Risk_Modeling)
 * [MSDN](https://msdn.microsoft.com/en-us/library/ee823878(v=cs.20).aspx)
