@@ -28,5 +28,16 @@ A great software architect needs master both sides of the architect's coin: busi
 9. You're negotiating more often than you think
 10. Quantify
   * "Fast" is not a requirement.
+11. One line of working code is worth 500 of specification
+  * Value the team members who work on implementing your vision. 
+  * Listen to them. When they have problems with the design, there's a good chance they're right and the design is wrong
+12. There is no one-size-fits-all solution
+  * contextual sense – a knowledge of what is reasonable within a given context.  
+  * The most important knowledge of software patterns is the knowledge of when to apply them and when not to apply them, and the same is true of different root cause hypotheses and associated corrective actions during problem analysis
+13. It's never too early to think about performance
+14. Application architecture determines application performance
+15. Commit-and-run is a crime.
+  
+
 
 
