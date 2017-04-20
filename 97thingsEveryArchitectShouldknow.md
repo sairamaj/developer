@@ -28,5 +28,8 @@ A great software architect needs master both sides of the architect's coin: busi
 9. You're negotiating more often than you think
 10. Quantify
   * "Fast" is not a requirement.
+11. One line of working code is 500 of Specification
+  * Value the team members who work on implementing your vision.
+  
 
 
