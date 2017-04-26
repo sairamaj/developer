@@ -1,3 +1,6 @@
+# Basics
+* Local Git
+  
 git init
 git status
 git commit -m "comment here"
@@ -19,3 +22,4 @@ to apply newly added .gitignore to already existing files on GitHub
 	git add .
 	git commit -m ".gitignore is now working"
 	git push origin master
+
