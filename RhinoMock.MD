@@ -38,6 +38,6 @@ Expect.Call(view.Ask(null,null)).IgnoreArguments().Constraints(
 
 
 ## Resources
-[Ayende](https://ayende.com/wiki/MainPage.ashx)
-[Using Rhino.Mocks - quick guide to generating mocks and stubs](http://www.wrightfully.com/using-rhino-mocks-quick-guide-to-generating-mocks-and-stubs/)
-[HOW TO USE RHINO MOCKS – DOCUMENTED THROUGH TESTS](http://jonkruger.com/blog/2010/03/12/how-to-use-rhino-mocks-documented-through-tests/)
+* [Ayende](https://ayende.com/wiki/MainPage.ashx)
+* [Using Rhino.Mocks - quick guide to generating mocks and stubs](http://www.wrightfully.com/using-rhino-mocks-quick-guide-to-generating-mocks-and-stubs/)
+* [HOW TO USE RHINO MOCKS – DOCUMENTED THROUGH TESTS](http://jonkruger.com/blog/2010/03/12/how-to-use-rhino-mocks-documented-through-tests/)
