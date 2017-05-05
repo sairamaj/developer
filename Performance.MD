@@ -52,6 +52,8 @@
 * A specific set of application characteristics
 * Specific resource constraints, if any
 
+## Visual studio load test
+[Running Web and Load tests from command line](https://blogs.msdn.microsoft.com/slumley/2008/12/22/running-web-and-load-tests-from-the-command-line/)
 
 
 

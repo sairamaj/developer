@@ -37,3 +37,13 @@ function Get-FullName
 
 Get-FullName "usernamehere"
 ```
+
+## Poweshell class
+
+```powershell
+class TestResult
+{
+    [datetime]$dateTime
+    [hashtable]$responses
+}
+```
