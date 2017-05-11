@@ -1,0 +1,1 @@
+[Masking a 404 error in a dependent request](https://blogs.msdn.microsoft.com/edglas/2008/08/06/masking-a-404-error-in-a-dependent-request/)
