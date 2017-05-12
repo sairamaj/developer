@@ -35,6 +35,11 @@
  *	git commit -m ".gitignore is now working" 
  *	git push origin master
 
+## Get latest from source ignoring local changes
+* git reset --hard
+* git pull
+  
+
 ## Git on server - Protocols
 * Local ( file based: git clone /srv/git/project.git)
 * HTTP/HTTPS ( HTTP based:  git clone https://example.com/gitproject.git)
