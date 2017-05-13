@@ -47,3 +47,14 @@ class TestResult
     [hashtable]$responses
 }
 ```
+
+#### using -split option to remove white spaces
+```powershell
+  ("abc   xyz" -split " {2,}")[1]
+```
+#### transforming a string
+```powershell
+(Get-content .\capitals.txt)  | % { ($_ -split "`t")[0] + " capital is " + ($_ -split "`t")[1]}
+```
+
+
