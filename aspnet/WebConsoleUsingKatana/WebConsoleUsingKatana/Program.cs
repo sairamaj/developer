@@ -61,6 +61,7 @@ namespace WebConsoleUsingKatana
 
 		public Task Invoke(IDictionary<string, object> environment)
 		{
+
 			var response = environment["owin.ResponseBody"] as Stream;
 			using (var writer = new StreamWriter(response))
 			{
