@@ -57,4 +57,43 @@ class TestResult
 (Get-content .\capitals.txt)  | % { ($_ -split "`t")[0] + " capital is " + ($_ -split "`t")[1]}
 ```
 
+#### ignoring the certificate errors.
+```powershell
+add-type @"
+    using System.Net;
+    using System.Security.Cryptography.X509Certificates;
+    public class TrustAllCertsPolicy : ICertificatePolicy {
+        public bool CheckValidationResult(
+            ServicePoint srvPoint, X509Certificate certificate,
+            WebRequest request, int certificateProblem) {
+            return true;
+        }
+    }
+"@
+[System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
+```
+### Script root directory
+```powershell
+$RootDirectory = split-path $SCRIPT:MyInvocation.MyCommand.Path -parent
+```
 
+### Specifying validation set on input parameters.
+```powershell
+param(
+    [Parameter()]
+    [ValidateSet('foo','bar','baz')]
+    [string[]]
+    $Item
+)
+```
+### adding xml in powershell
+```powershell
+    $configHttpHandlerElement = $doc.CreateElement("add")
+    $nameAttribute = $doc.CreateAttribute("name")
+    $nameAttribute.Value = "Configuration"
+    $configHttpHandlerElement.Attributes.Append($nameAttribute)
+```    
+### removing xml in powershell
+```powershell
+  $node.RemoveChild($configHandler)
+```

@@ -1,0 +1,15 @@
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\WebConsoleUsingKatana.exe.config
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\obj\Debug\WebConsoleUsingKatana.csprojResolveAssemblyReference.cache
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\WebConsoleUsingKatana.exe
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\WebConsoleUsingKatana.pdb
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\Microsoft.Owin.dll
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\Microsoft.Owin.Hosting.dll
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\Owin.dll
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\Microsoft.Owin.xml
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\Microsoft.Owin.Hosting.xml
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\obj\Debug\WebConsoleUsingKatana.exe
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\obj\Debug\WebConsoleUsingKatana.pdb
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\Microsoft.Owin.Diagnostics.dll
+e:\dev\sairamaj\developer\aspnet\WebConsoleUsingKatana\WebConsoleUsingKatana\bin\Debug\Microsoft.Owin.Diagnostics.xml
