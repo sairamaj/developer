@@ -56,5 +56,8 @@
 * refs
   * pointers into commit objects in that data(branches)
 
+### Get URL for local repository pointing to
+* git remote show origin
+
 
  

@@ -58,5 +58,16 @@
 ```csharp
     app.Run(ctx => ctx.Response.WriteAsync("Hello World!"));
 ```
-* Katana adds this
+
+Host -> Server -> Katana -> Application(WebAPI/MVC)
+
+### Authentications in MVC
+* No Authentication
+* Individual User Accounts(password based, Google,Microsoft,Facebook identities)
+* Organizational Accounts (Azure active directory , federated)
+* Windows Authentication
+
+
+
+
 
