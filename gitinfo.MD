@@ -59,5 +59,14 @@
 ### Get URL for local repository pointing to
 * git remote show origin
 
+### Get branch commands
+* Show current branch
+  * git branch
+* Create branch
+  * git branch <name of the branch>
+* Switch to branch
+  * git checkout <name of the branch>
+  
+
 
  

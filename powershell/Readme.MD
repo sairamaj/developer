@@ -97,3 +97,14 @@ param(
 ```powershell
   $node.RemoveChild($configHandler)
 ```
+
+### Get-Unique
+* Use -AsString (on objects to get unique items for given path.)
+
+### skip last in array
+```powershell
+    $List = "A","B","C","1","2","3";
+    ($List[0..($List.Length-2)] -join '') + ';';
+```
+
+
