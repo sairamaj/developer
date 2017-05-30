@@ -107,4 +107,9 @@ param(
     ($List[0..($List.Length-2)] -join '') + ';';
 ```
 
-
+### datetime parse
+* 2017-05-22 13:56:29
+```powershell
+$expression = '(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})'
+  $dateTime = [datetime]( [regex]::Match($logLine,$expression).captures.groups[0].captures.value )
+```
