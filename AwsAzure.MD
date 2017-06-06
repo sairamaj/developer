@@ -44,3 +44,7 @@
 
 [Public cloud cost comparison](https://calculator.unigma.com/#/instances)
 
+## SaaS
+Sofware as a service. A software licensing and delivery model in which software is licensed on a subscription basis and is centrally hosted.
+ex: Office 365
+
