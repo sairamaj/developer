@@ -5,8 +5,8 @@
        * Detecting credit card fraud
        * Determining whether a customer is likely to switch to a competitor
        * Deciding when to do preventive maintenance on a factory rebot
-
-# ![overview](https://github.com/sairamaj/developer/machinelearning/blob/master/images/overview.png)
+              
+# ![overview](https://github.com/sairamaj/developer/blob/master/machinelearning/images/overview.png)
 
 ## R
 * is an open source programming language and environment
@@ -18,7 +18,7 @@
     * Iterate until you have a model that makes a good predictions
     * Deploy the model.
 
-# ![process](https://github.com/sairamaj/developer/machinelearning/blob/master/images/process.png)
+# ![process](https://github.com/sairamaj/developer/blob/master/machinelearning/images/process.png)
 
 ## Terminology
 * Training Data
@@ -38,5 +38,12 @@
 * Neural network
 * Bayesian
 * K-means
+
+
+## Definition
+Building a model from example inputs to __make data driven predictions__ vs. following strictly __static program instructions__
+
+## Workflow
+# ![process](https://github.com/sairamaj/developer/blob/master/machinelearning/images/workflow.png)
 
 
