@@ -27,3 +27,16 @@
     * The value you want to predict is in the training data ( that data is __labeled__)
 * Unsupervisied Learning
     * The value you want to predict is not in the training dat ( that data is __unlabeled__)
+
+## Machine Learning Categories
+* Regression (best fit) ( how many items we will sell in nextmonth)
+* Classification  ( is this credit card fradulent)
+* Clustering ( for unsupervised learning) ( ex: what are our customer segments)
+
+## Machine Algorithms
+* Decision tree
+* Neural network
+* Bayesian
+* K-means
+
+
