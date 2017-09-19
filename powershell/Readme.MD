@@ -113,3 +113,16 @@ param(
 $expression = '(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})'
   $dateTime = [datetime]( [regex]::Match($logLine,$expression).captures.groups[0].captures.value )
 ```
+### Passthru
+Will emit the ouptut when you run the command
+
+Start-Process notepad
+Start-PRocess notepad -Passthru
+
+https://blogs.technet.microsoft.com/heyscriptingguy/2011/11/18/use-the-powershell-passthru-parameter-and-get-back-objects/
+
+### Special Characters
+http://www.neolisk.com/techblog/powershell-specialcharactersandtokens
+
+
+
