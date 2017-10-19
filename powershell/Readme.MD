@@ -113,3 +113,15 @@ param(
 $expression = '(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})'
   $dateTime = [datetime]( [regex]::Match($logLine,$expression).captures.groups[0].captures.value )
 ```
+
+### Convert-String
+[here](https://blogs.technet.microsoft.com/ashleymcglone/2016/09/13/use-the-new-powershell-cmdlet-convert-string-to-parse-email-addresses/)
+
+```powershell
+    @('abc$xyz','12$56788') | convert-string -Example 'abc$xyz=abc,xyz' | convertfrom-csv -header 'f
+t','second' | out-file c:\temp\test.txt
+
+```
+
+### ConvertFrom-String
+[here](https://blogs.technet.microsoft.com/ashleymcglone/2016/09/14/use-the-new-powershell-cmdlet-convertfrom-string-to-parse-klist-kerberos-ticket-output/)
