@@ -32,5 +32,18 @@ else
 classify = (input > 0) ? "positive" : "negative";  
 ```
 
+### [stackalloc](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/stackalloc)
+The __stackalloc__ keyword is used in an unsafe code context to allocate a block of memory on the stack.
+```csharp
+int* block = stackalloc int[100];
+```
+
+### [nameof](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/nameof)
+Used to obtain the simple (unqualified) string name of a variable, type, or member.
+```csharp
+if (x == null) throw new ArgumentNullException(nameof(x));  
+WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode"  
+```
+
 
  
