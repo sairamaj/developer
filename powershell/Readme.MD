@@ -124,5 +124,7 @@ https://blogs.technet.microsoft.com/heyscriptingguy/2011/11/18/use-the-powershel
 ### Special Characters
 http://www.neolisk.com/techblog/powershell-specialcharactersandtokens
 
+### Set File attribute
+Set-ItemProperty file.txt -name IsReadOnly -value $false
 
 
