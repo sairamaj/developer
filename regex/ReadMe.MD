@@ -34,5 +34,8 @@ $  - anchros end of the string
 - regexper.com		- shows nice pictural view of the regular expression.
 - http://regexstorm.net/tester	- nice way of testig.
 
-![]()
+![regusage](https://github.com/sairamaj/developer/blob/master/regex/images/regusage.png)
 
+![regvisual](https://github.com/sairamaj/developer/blob/master/regex/images/regvisual.png)
+
+![basicsyntaxsummary](https://github.com/sairamaj/developer/blob/master/regex/images/basicsyntaxsummary.png)
