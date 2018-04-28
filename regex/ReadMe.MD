@@ -1,20 +1,38 @@
-# Sample parsing date
-```csharp
-    // \d - digit
-    // \d{4} - 4 digits
-    // \d{1,2} - 1 or 2 digits
-    // \w+ - word
-    var pattern = @"(?<datetime>\d{4}-\d{1,2}-\d{1,2} \d{1,2}:\d{1,2}:\d{1,2},\d{1,3}) \[(?<tid>\d{1,3})\] (?<level>\w+)";
-    var line = @"2018-04-13 12:00:32,675 [36] ERROR";
-    var regex = new System.Text.RegularExpressions.Regex(pattern);
-    var match = regex.Match(line);
-    Console.WriteLine(match.Groups["datetime"].Value);
-    Console.WriteLine(match.Groups["tid"].Value);
-    Console.WriteLine(match.Groups["level"].Value);
-    var dt = DateTime.ParseExact(match.Groups["datetime"].Value, "yyyy-MM-dd HH:mm:ss,fff", null);
-    Console.WriteLine(dt.ToString("yyyy-MM-dd HH:mm:ss,fff"));
+[] - range
+/   / - start and end of regular expression
 
-```
+Color code validation
+---------------------
+html color is: # R G B 
 
-## To test
-  [here](http://regexstorm.net/tester)
+
+?  - 0 or 1
+*  - 0 or more
++  - 1 or more
+
+
+#[ABCDEF0123456789]+
+#[A-F0-9]+   ( here starts with # )
+
+#?[A-F0-9]+  ( # is optional )
+{ }   - Used for range
+	{6}  - exact six characters.
+	#?[A-F0-9]{6}
+
+
+|  (pipe) is used for OR
+
+/i  - case insensitive
+
+^  - anchros begining string
+$  - anchros end of the string
+^#?[A-Fa-f0-9]{6}$    (entire string has to have the format of # followed by exact 6 characters. ^ and $ will make begin and end of the string
+
+\s  - white space.
+\s* - multiple white space ( * is used 0 or more )
+
+- regexper.com		- shows nice pictural view of the regular expression.
+- http://regexstorm.net/tester	- nice way of testig.
+
+![]()
+
