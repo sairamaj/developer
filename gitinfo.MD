@@ -38,6 +38,11 @@
  *	git commit -m ".gitignore is now working" 
  *	git push origin master
 
+## Get latest from source ignoring local changes
+* git reset --hard
+* git pull
+  
+
 ## Git on server - Protocols
 * Local ( file based: git clone /srv/git/project.git)
 * HTTP/HTTPS ( HTTP based:  git clone https://example.com/gitproject.git)
@@ -54,6 +59,7 @@
 * refs
   * pointers into commit objects in that data(branches)
 
+<<<<<<< HEAD
 * echo "Apple Pie" | git hash-object --stdin -w  (Writes the file)
 * git cat-file bb3918d5053fea31fc9a58fae1e5bdeabe3ec647 -p
 * git count-objects 
@@ -67,6 +73,20 @@
 (Tag is like branch but does not move)
 ### Git tools
 stree
+=======
+### Get URL for local repository pointing to
+* git remote show origin
+
+### Get branch commands
+* Show current branch
+  * git branch
+* Create branch
+  * git branch <name of the branch>
+* Switch to branch
+  * git checkout <name of the branch>
+  
+
+>>>>>>> c430c95d4e51a38a368fb1aea407358dc77a2b4d
 
 ### Git concepts
 pull = fetch + merge
