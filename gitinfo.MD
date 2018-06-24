@@ -27,6 +27,9 @@
  *	git rm -r one-of-the-directories
  *	git commit -m "Remove duplicated directory"
  *	git push origin <your-git-branch> (typically 'master', but not always)
+* git branch -all
+* git show-ref mater (shows the branch points)
+* git cat-file hash
 
 
 * to apply newly added .gitignore to already existing files on GitHub
@@ -51,5 +54,21 @@
 * refs
   * pointers into commit objects in that data(branches)
 
+* echo "Apple Pie" | git hash-object --stdin -w  (Writes the file)
+* git cat-file bb3918d5053fea31fc9a58fae1e5bdeabe3ec647 -p
+* git count-objects 
+### Git objects
+* blob
+* commit
+* tree
+* text
+  * annotated tags (carries lot of information, date, who created etc.,)
+  * regular tags (light weight tag)
+(Tag is like branch but does not move)
+### Git tools
+stree
 
- 
+### Git concepts
+pull = fetch + merge
+
+# ![gitobjects](https://github.com/sairamaj/developer/blob/master/images/gitobjects.png)
