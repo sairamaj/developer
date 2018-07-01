@@ -33,11 +33,30 @@
 
 
 * to apply newly added .gitignore to already existing files on GitHub
- *	git rm -r --cached .
- *	git add .
- *	git commit -m ".gitignore is now working" 
- *	git push origin master
-
+*	git rm -r --cached .
+*	git add .
+*	git commit -m ".gitignore is now working" 
+*	git push origin master
+*  git diff HEAD~1  (difference between head and previous one)
+*  git diff 701ae..663397
+*  git diff --cached
+*  git checkout readme.txt (overwrite changes and gets from HEAD.) ( revert changes.)
+*  git reset --hard ( go back to HEAD and loose all local changes)
+*  git reset --soft HEAD~1  (kind of getting back in to working area the changes.)
+*  git log --oneline
+*  git log --graph
+*  git log --graph --online --decorate
+*  git shortlog  
+*  git shortlog -sne
+*  git show HEAD    (git show HEAD~1) (git show 353e3)
+*  git branch --set-upstream master origin (establishes the link)
+*  git config --global alias.lga "log --graph --oneline --all --decorate"  (adding alias.)
+*  git reflog  (shows all the changes of HEAD movement)
+*  git stash (moving changes to temporary )
+*  git stash list
+*  git stash apply
+*  git stash pop  ( removes from the top of stash)
+*  git mergetool
 ## Get latest from source ignoring local changes
 * git reset --hard
 * git pull
@@ -49,6 +68,7 @@
 * SSH ( git clone ssh://user@server/project.git  ,  git clone user@server:project.git)
 * Git ( git specific . no authentication - fast)
 
+
 ## Git Internals
 * HEAD
   * branch you currently have checked out.
@@ -59,7 +79,6 @@
 * refs
   * pointers into commit objects in that data(branches)
 
-<<<<<<< HEAD
 * echo "Apple Pie" | git hash-object --stdin -w  (Writes the file)
 * git cat-file bb3918d5053fea31fc9a58fae1e5bdeabe3ec647 -p
 * git count-objects 
@@ -73,7 +92,6 @@
 (Tag is like branch but does not move)
 ### Git tools
 stree
-=======
 ### Get URL for local repository pointing to
 * git remote show origin
 
@@ -82,13 +100,19 @@ stree
   * git branch
 * Create branch
   * git branch <name of the branch>
+  * git branch <sha of commit>  ( instead of HEAD )
 * Switch to branch
   * git checkout <name of the branch>
-  
+  * git checkout -b <name>  ( create and switch)
+* Renaming Branch  
+  * git branch m old new
+* Delete branch
+  * git branch -d <name>
+  * git branch -D <name> ( force the delete and loose changes)
 
->>>>>>> c430c95d4e51a38a368fb1aea407358dc77a2b4d
 
 ### Git concepts
 pull = fetch + merge
 
 # ![gitobjects](https://github.com/sairamaj/developer/blob/master/images/gitobjects.png)
+
