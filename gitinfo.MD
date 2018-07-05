@@ -17,9 +17,12 @@
 * git status
 * git commit -m "comment here"
 * git add *
+* git add -i  (interactive)
 * git rm --cache <filename>
 * git remote add origin https://github.com/sairamaj/java
 * git push origin master
+* git push origin <localbranchname>
+* git push origin localbranch:remotebranch
 * git clone <url> ( in new directory to get source from remote
 * git checkout .   - to loose changes on working copy
 * git log --graph --decorate --abbrev-commit --all --pretty=oneline
@@ -109,7 +112,8 @@ stree
 * Delete branch
   * git branch -d <name>
   * git branch -D <name> ( force the delete and loose changes)
-
+* List remote branches
+  * git branch -r
 
 ### Git concepts
 pull = fetch + merge
