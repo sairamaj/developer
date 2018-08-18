@@ -64,4 +64,7 @@
   * [Code smells](https://blog.codinghorror.com/code-smells/)
 * ### [Static methods are code smell](http://www.benday.com/blogfiles/StaticMethodsCodeSmell/BenDay_StaticMethods_CodeSmell.pdf)
 
+## Some more code smells
+* Duplicate code (copy and paste)
+
 # [Code Metrics - Cyclomatic  Complexity](https://blogs.msdn.microsoft.com/zainnab/2011/05/17/code-metrics-cyclomatic-complexity/)

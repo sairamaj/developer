@@ -34,3 +34,7 @@
 * Export as pfx
 * Use openssl
     * openssl pkcs12 -in input.pfx -out output.pem -nodes
+
+## CSR
+[What is a CSR (Certificate Signing Request)?
+](https://www.sslshopper.com/what-is-a-csr-certificate-signing-request.html)
