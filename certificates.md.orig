@@ -35,8 +35,11 @@
 * Use openssl
     * openssl pkcs12 -in input.pfx -out output.pem -nodes
 
+<<<<<<< HEAD
 [Eight tips for working with X.509 certificates in .NET](http://paulstovell.com/blog/x509certificate2)
 [.crt .key to .pfx](https://www.sherweb.com/blog/when-given-crt-and-key-files-make-a-pfx-file/)
+=======
 ## CSR
 [What is a CSR (Certificate Signing Request)?
 ](https://www.sslshopper.com/what-is-a-csr-certificate-signing-request.html)
+>>>>>>> f3a23208b95358f2f8ae0d8fa137ce4c053f90ec

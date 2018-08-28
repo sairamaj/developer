@@ -1,0 +1,4 @@
+[How to think like a programmer — lessons in problem solving](https://medium.freecodecamp.org/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2)
+
+### [Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
+In software engineering, rubber duck debugging or rubber ducking is a method of debugging code. The name is a reference to a story in the book The Pragmatic Programmer in which a programmer would carry around a rubber duck and debug their code by forcing themselves to explain it, line-by-line, to the duck.[1] Many other terms exist for this technique, often involving different inanimate objects.
