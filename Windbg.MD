@@ -221,7 +221,7 @@ $$        	!do poi(@$t5+@$ptrsize)
   <Exceptions>
      <Config>
        <Code>AllExceptions</Code>
-       <Actions1> Log </Actions1>
+       <Actions1> Log </Actions1> 
      </Config>
      <Config>
        <Code> av </Code>
@@ -238,4 +238,8 @@ $$        	!do poi(@$t5+@$ptrsize)
     !for_each_module !savemodule ${@#Base} f:\blog\modules\${@#ModuleName}.dll
 ```
 
+## [MEX](https://www.microsoft.com/en-us/download/details.aspx?id=53304)
+* To load module
+  * !ilspy -t -p <path to ilspy.exe here> <.NET type here.>
+  
 

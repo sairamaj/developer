@@ -34,3 +34,6 @@
 * Export as pfx
 * Use openssl
     * openssl pkcs12 -in input.pfx -out output.pem -nodes
+
+[Eight tips for working with X.509 certificates in .NET](http://paulstovell.com/blog/x509certificate2)
+[.crt .key to .pfx](https://www.sherweb.com/blog/when-given-crt-and-key-files-make-a-pfx-file/)

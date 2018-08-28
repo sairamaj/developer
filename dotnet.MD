@@ -1,0 +1,1 @@
+[Enabling TLS in .NET](https://blogs.perficient.com/2016/04/28/tsl-1-2-and-net-support/)

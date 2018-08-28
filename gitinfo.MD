@@ -25,6 +25,7 @@
 * git push origin localbranch:remotebranch
 * git clone <url> ( in new directory to get source from remote
 * git checkout .   - to loose changes on working copy
+* git checkout -- <filename> ( to loose change only this file)
 * git log --graph --decorate --abbrev-commit --all --pretty=oneline
 * to remove directory
  *	git rm -r one-of-the-directories
@@ -120,3 +121,10 @@ pull = fetch + merge
 
 # ![gitobjects](https://github.com/sairamaj/developer/blob/master/images/gitobjects.png)
 
+### using merge and difftool with vscode
+* git config --global merge.tool vscode
+* git config --global mergetool.vscode.cmd "code --wait $MERGED"
+* git config --global diff.tool vscode
+* git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+
+[Renaming the branch](https://multiplestates.wordpress.com/2015/02/05/rename-a-local-and-remote-branch-in-git/)
