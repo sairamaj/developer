@@ -34,7 +34,9 @@ kubectl label pod <podname> <newlabel>
 
 kubectl get deployments
 
-// to scale
+// to 
+
+
 kubectl scale deployment/<name> --replicas=4
 
 // rolling updates
