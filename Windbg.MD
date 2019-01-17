@@ -221,7 +221,7 @@ $$        	!do poi(@$t5+@$ptrsize)
   <Exceptions>
      <Config>
        <Code>AllExceptions</Code>
-       <Actions1> Log </Actions1>
+       <Actions1> Log </Actions1> 
      </Config>
      <Config>
        <Code> av </Code>
@@ -250,3 +250,8 @@ $$        	!do poi(@$t5+@$ptrsize)
 * Now it will stop when function returned
 * use __r__ to list the address
 * then return value will be at eax register ( !do eax)
+## [MEX](https://www.microsoft.com/en-us/download/details.aspx?id=53304)
+* To load module
+  * !ilspy -t -p <path to ilspy.exe here> <.NET type here.>
+  
+
