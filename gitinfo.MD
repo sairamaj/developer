@@ -61,6 +61,9 @@
 *  git stash apply
 *  git stash pop  ( removes from the top of stash)
 *  git mergetool
+*  git ls-tree master
+*  git ls-file
+
 ## Get latest from source ignoring local changes
 * git reset --hard
 * git pull

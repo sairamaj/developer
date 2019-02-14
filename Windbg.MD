@@ -238,6 +238,18 @@ $$        	!do poi(@$t5+@$ptrsize)
     !for_each_module !savemodule ${@#Base} f:\blog\modules\${@#ModuleName}.dll
 ```
 
+### Putting a breakpoint on returns to see what function is returing
+* Get method description of the function
+* !dumpmt -md <methoddescription>
+* !bpmd -md <particular method>
+* when breakpoint hits
+  * use kpL
+  * get the retAddress
+  * bp <retAddress>
+  * go
+* Now it will stop when function returned
+* use __r__ to list the address
+* then return value will be at eax register ( !do eax)
 ## [MEX](https://www.microsoft.com/en-us/download/details.aspx?id=53304)
 * To load module
   * !ilspy -t -p <path to ilspy.exe here> <.NET type here.>
