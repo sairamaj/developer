@@ -18,7 +18,7 @@ public class Gamer {
 	
 	void create() {
 		for(int i=0; i<numberOfTowers; i++) {
-			towers[i] = new Tower(i+1);
+			towers[i] = new Tower(i+1, 10 + i*10);
 		}
 		
 		towers[0].addDisc(DiscManager.getLarge());
@@ -27,13 +27,15 @@ public class Gamer {
 		draw();
 	}
 	
-	void move(int from, int to) throws Exception {
+	void move(int from, int to) {
 		if( from <= 0) {
-			throw new Exception("from is invalid. allowed 0,1,2");
+			System.out.println("from should be more than 0");
+			return;
 		}
 		
-		if( to >maxTowers) {
-			throw new Exception("to is invalid. allowed 0,1,2");
+		if( to >numberOfTowers) {
+			System.out.println("to should be less than " + this.numberOfTowers);
+			return;
 		}
 		
 		Disc disc = towers[from-1].removeDisc();
@@ -43,6 +45,7 @@ public class Gamer {
 	
 	private void draw() {
 		for(int i=0; i<numberOfTowers; i++) {
+			System.out.println("");
 			towers[i].draw();
 		}
 	}
