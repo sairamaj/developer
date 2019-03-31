@@ -61,8 +61,10 @@ namespace Server
                                                 if (context.Username == "sai")
                                                 {
                                                     System.Console.WriteLine(">>> Adding administartor role.");
-                                                    claims.Append(new Claim(ClaimTypes.Role, "Administrator", ClaimValueTypes.String));
-                                                    claims = claims.ToArray();
+                                                    claims = claims.Append(new Claim(ClaimTypes.Role, "Administrator", ClaimValueTypes.String)).ToArray();
+                                                    foreach(var c in claims){
+                                                        System.Console.WriteLine($">>>>> {c.Type}");
+                                                    }
                                                 }
 
                                                 context.Principal = new ClaimsPrincipal(
