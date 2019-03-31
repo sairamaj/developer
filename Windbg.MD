@@ -255,3 +255,14 @@ $$        	!do poi(@$t5+@$ptrsize)
   * !ilspy -t -p <path to ilspy.exe here> <.NET type here.>
   
 
+### Address summary explained
+[summary](https://blogs.iis.net/webtopics/address-summary-explained)
+
+#### RegionUsageIsVAD
+* .NET Memory ( use !dumpheap -stat or !eeheap -c)
+
+#### RegionUsageHeap
+* Unmanaged memory
+
+
+
