@@ -40,3 +40,11 @@
 ## CSR
 [What is a CSR (Certificate Signing Request)?
 ](https://www.sslshopper.com/what-is-a-csr-certificate-signing-request.html)
+
+## Formats of Certificates
+[source](https://www.tutorialsteacher.com/https/ssl-certificate-format)
+![formats](https://github.com/sairamaj/developer/blob/master/images/certformats.jpg)
+[converters](https://www.sslshopper.com/ssl-converter.html)
+
+
+
