@@ -49,6 +49,9 @@
 
 .pfx contains both public and private key and usually .cer contains public key and .key contains private key
 
+## Types of Certificates
+![formats](https://github.com/sairamaj/developer/blob/master/images/certtypes.jpG)
+[source - detailed https info here](https://www.smashingmagazine.com/2017/06/guide-switching-http-https/)
 
 
 
