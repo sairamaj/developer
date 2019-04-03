@@ -44,7 +44,11 @@
 ## Formats of Certificates
 [source](https://www.tutorialsteacher.com/https/ssl-certificate-format)
 ![formats](https://github.com/sairamaj/developer/blob/master/images/certformats.jpg)
+
 [converters](https://www.sslshopper.com/ssl-converter.html)
+
+.pfx contains both public and private key and usually .cer contains public key and .key contains private key
+
 
 
 
