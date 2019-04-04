@@ -36,6 +36,7 @@ namespace Server
             services.AddAuthentication(CertificateAuthenticationDefaults.AuthenticationScheme)
                         .AddCertificate(options =>
                         {
+                            options.AllowedCertificateTypes = CertificateTypes.All;
                             options.Events = new CertificateAuthenticationEvents
                             {
                                 OnAuthenticationFailed = context =>
@@ -81,7 +82,7 @@ namespace Server
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            //   app.UseAuthentication();
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

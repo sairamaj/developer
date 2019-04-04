@@ -28,6 +28,7 @@ namespace Server
                 .UseStartup<Startup>()
                 .UseKestrel(options =>
            {
+               
                options.Listen(IPAddress.Loopback, 5001, listenOptions =>
                {
                    listenOptions.UseHttps(new HttpsConnectionAdapterOptions
@@ -35,6 +36,7 @@ namespace Server
                         ServerCertificate = GetCert("44CB3F821C21666745DDACA9F7F27B35DE537DC5"),
                         ClientCertificateMode = ClientCertificateMode.RequireCertificate,
                         ClientCertificateValidation = CertificateValidator.DisableChannelValidation,
+
 
                    });
                });
