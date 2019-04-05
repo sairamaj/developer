@@ -1,0 +1,1 @@
+openssl req -days 1095 -x509 -out clientauthcert.crt -keyout clientauthcert.key -newkey rsa:2048 -nodes -sha256 -subj "/CN=clientauthcert" -extensions EXT -config ./clientauthcert.config
