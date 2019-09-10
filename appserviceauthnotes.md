@@ -3,12 +3,12 @@ show the page
 add authorize attribute
 browse-> error
 add app registration
-	-https://localhost:5000/signout-oidc
+	-https://localhost:5001/signout-oidc
 edit
 	- enable id tokens
 in project
 	edit appsettings.json
-		- update tenantid, client id, url
+		- update tenantid, client id, url, domain(fiservdc.onmicrosoft.com  )
 	adding package
 		dotnet add package Microsoft.AspNetCore.All --version 2.2.6
 	add 2 extension class

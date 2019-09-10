@@ -22,3 +22,6 @@ particular methodology or environment.
 * Continuous learning
 
 __Infrastructure as Code)__: When the process of provisioning of infrastructure and its configuration is represented through code and the same code goes through the application life cycle process, it is known as Infrastructure as Code
+
+
+__DevOps__ union of people, process, products to enable continous delivery of end users.
