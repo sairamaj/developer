@@ -8,7 +8,7 @@ edit
 	- enable id tokens
 in project
 	edit appsettings.json
-		- update tenantid, client id, url, domain(fiservdc.onmicrosoft.com  )
+		- update tenantid, client id, url, domain(testdc.onmicrosoft.com  )
 	adding package
 		dotnet add package Microsoft.AspNetCore.All --version 2.2.6
 	add 2 extension class
