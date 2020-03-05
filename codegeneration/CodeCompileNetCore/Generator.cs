@@ -10,23 +10,12 @@ using Microsoft.CodeAnalysis.Emit;
 
 namespace CodeCompileNetCore
 {
-    // https://github.com/joelmartinez/dotnet-core-roslyn-sample
-
-    class Program
+    public class Generator
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-            Generate(@"test.dll", new[]
-            {
-                File.ReadAllText("source.txt")
-            });
-        }              
-
-        static void Generate(string assemblyName, string[] csFiles)
+        public Generator(IEnumerable<Assembly> refAssemblies, string[] sources)
         {
             var syntaxTrees = new List<SyntaxTree>();
-            csFiles.ToList().ForEach(c=> syntaxTrees.Add(CSharpSyntaxTree.ParseText(c)));
+            sources.ToList().ForEach(c => syntaxTrees.Add(CSharpSyntaxTree.ParseText(c)));
             var refPaths = new[] {
                 typeof(System.Object).GetTypeInfo().Assembly.Location,
                 typeof(Console).GetTypeInfo().Assembly.Location,
@@ -72,6 +61,7 @@ namespace CodeCompileNetCore
                     }
                 }
             }
+
         }
     }
 }
