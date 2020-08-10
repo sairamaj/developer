@@ -8,6 +8,7 @@ int convert(char *data){
     int asciiZero = 48;
     int place =1;
     while(i >0 ){
+        printf("%c-%d\n", *ptr, *ptr);
         int digit = (int)*ptr - asciiZero;
         value += (digit* place);
         i--;
