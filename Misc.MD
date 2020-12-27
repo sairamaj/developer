@@ -18,3 +18,6 @@ doign lot of things at once
     -> sending email1,email2 and other things at the same time
 
 [source] (https://blog.golang.org/concurrency-is-not-parallelism)
+
+### Semantic Version
+Semantic version numbers have three numeric components, Major.Minor.Patch. When you fix a bug, you increment the patch (1.0.0 to 1.0.1). When you release a new backward-compatible feature, you increment the minor version and reset the patch version to 0 (1.4.17 to 1.5.0). When you make a backward-incompatible change, you increment the major version and reset the minor and patch versions to 0 (2.6.5 to 3.0.0).

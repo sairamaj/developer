@@ -49,3 +49,5 @@
     * Means that you can use only the type originally specified; so an invariant generic type parameter is neither covariant nor contravariant.
     * You cannot assign an instance of List<Base> to a variable of type List<Derived> or vice versa.
 
+[TOGAF](https://pubs.opengroup.org/architecture/togaf9-doc/arch/?ref=wellarchitected-wp)
+[Zacman Framework](https://www.zachman.com/about-the-zachman-framework?ref=wellarchitected-wp)
