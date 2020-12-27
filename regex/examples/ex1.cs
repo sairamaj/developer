@@ -6,11 +6,12 @@ public class Program
 	public static void Main()
 	{
 		Console.WriteLine("Hello World");
-		var pattern = @"(?<name>\w+)\/(?<address>\w+.[^\?]*)?(\?last=(?<lastname>\w+))*\|(?<value>.*)";
+		var pattern = @"(?<name>[\w+|\.])\/(?<address>\w+.[^\?]*)?(\?last=(?<lastname>\w+))*\|(?<value>.*)";
 		var r = new Regex(pattern);
 		var inputs = new string[]{
 			@"sai/17003 nw tucson st/beaverton/or?last=jamalapuram|value here\r\n additional vaulue",
-			@"ram/17004 nw tucson st/beaverton/or|ram value here\r\n additional vaulue",
+			@"ram/17004 nw tucson st/beaverton/or|ram value here\r\n additional vaulue\r\n some more",
+			@"./17004 nw tucson st/beaverton/or|ram value here\r\n additional vaulue\r\n some more",
 		};
 		
 		foreach(var input in inputs)
