@@ -7,3 +7,11 @@
 * examples
   * an+b  will become O(n)
   * an^2+bn+c will become O(n^2)
+* Polynomial
+  * O(n^c)  
+    * O(n^2), O(n^3)
+* Exponential
+  * O(c^n)
+    * O(2^n)
+* Linear
+  * O(n)
