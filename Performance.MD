@@ -56,5 +56,13 @@
 [Running Web and Load tests from command line](https://blogs.msdn.microsoft.com/slumley/2008/12/22/running-web-and-load-tests-from-the-command-line/)
 
 
+# Measuring
+[95 percentile](https://www.appdynamics.com/blog/product/percentiles-made-easy/)
+* standard deviation
+  * The Standard Deviation is a measure of how spread out numbers are
+  * [info](https://www.mathsisfun.com/data/standard-deviation.html)
+* variance
+  * The average of the squared differences from the Mean
 
+[avg sucks percentiles are great](https://www.dynatrace.com/news/blog/why-averages-suck-and-percentiles-are-great/)
 
