@@ -40,4 +40,18 @@ __memoizing__ a result means to store the result of a function call, usually in 
 ```cmd
   Profit = {1,2,5,6}
   Weight = {2,3,4,5}
-``
+```
+
+# DP steps
+
+* examples are for climbing stairs problem
+* Define the objective function
+  * ex: f(i) is the number of distinct ways of reaching i th stair.
+* Identify base cases
+  * ex: f(0) = 1 and f(1) = 1
+* Write down recurrence relation for the optimized objective function
+  * f(n) = f(n-1) + f(n-2)
+* What is the order of execution
+  * bottom-up
+* Where to look for the answer?
+  * f(n)
