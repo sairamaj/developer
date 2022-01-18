@@ -5,3 +5,5 @@ github.com
 db.lock
 .vs
 temp
+*.exe
+*.obj
