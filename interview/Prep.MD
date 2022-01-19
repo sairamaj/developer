@@ -79,6 +79,15 @@ _____
 * Circuit Breaker in COASP
   * Purpose
   * Introduce circuit breaker in COASP services when calling external clients to fail safely in case of issues with external entities
+  * Situation
+    * There were number of production outages because of 3rd party services were not responding properly during the peak production times. The consuming services in our product does not have any mechanisim to protect from this , causing the latency and system down issues.
+  * Task
+    * I have to come up with a strategy to protect our systems from 3rd party failures across all our consuming applications. The changes should be such that we will have different configurations for different services and the code changes should be minimal in order to reduce the testing area.
+  * Action
+    * Developed a internal package which consumes the standard .NET Polly package which has different Circuit breaker functionality. This module contains all the necessary configuraiton, application insights using performance counters and with Autofac DI was able inject this framework in to consuming application with minimal changes.
+  * Result
+    * Today we have all 3rd party calls go through this circuit breaker package and recover from any latency or failures from external systems. We never had this issue anytime after these changes in our production.
+
   * Challenges
     * Develop package such that it can be integrated easily with external services without much changes to existing code.
 
@@ -87,6 +96,14 @@ _______
 * Voltage Integration
   * Purpose
     * Voltage encryption feature in COASP across all Edges
+  * Situation
+    * There is enterprise level effort to implement standard encryption for data. This is to integrate with 3rd party Voltage for sensitive fields across the enterprise. We need to add this functionality across entire suite of products. This effort is to take care of all edges and once data enters in to the system should encrypt the data and traver within the layers as encrypted data.
+  * Task
+    * Identified all the edges and use appropriate framework extensions (like WCF  Behavios for WCF services, HTTP extensions for REST API, Custom framework extension for custom applications) to integrate this tokenization/detokenization for sensitive fields. Migration has been idenfied as big tasks as the current system is multitenant and huge data exists in the system which needs to be encrypted without taking the system down. There were number of batch job applications which were either consuming external data or producing the data to be consumed by the external systems.
+  * Action
+    * Developed a framework to write appropriate extensions to inject this tokenizaiton/detokenizaiton and using Autofac DI and through configuration , all edges were taken care. This framework involved in application insights, tokenization/detokenization, Tenant level (for migration strategy).
+  * Result
+    * Tokenizaiton/Detokenization is the production with all sensitive data being encrypted in the system. Some of the pilot customers were migrated and validation is in the progress.
   * Challenges
     * Come up with framework level addons to integrate voltage instead of changing the entire code base to take care of this
     * Come up with tenant level, field level (configuration at account numbers, tax ids fields)
@@ -112,7 +129,15 @@ ______
 		
 * Conditional Logging
   * Purpose
-    * Enabling debug log levels on the fly for a given tenant to troubleshoot.
+    * Enabling debug log levels on the fly for a given tenant , user and particular tranaction to troubleshoot.
+  * Situation
+    * Product is multi tenant and need a way to enable Debugging for a tenant and also for specific user and specific transaction. This was a requirement as some scnearios , support team wants to do analyze the DEBUG logs to trouble shoot issues.
+  * Task
+    * Come up with solution without changing any existing application code.
+  * Action
+    * As all applications are using log4net library , found there are interceptors one can write to interceptor to intercept the logging statemens and take action. Wrote custom interceptors which based on configuration redirect logging statements to DEBUG. 
+  * Result
+    * Today one can enable conditional loging (logs at USER,TENANT and TRANSACTION) and also with Auto turn off this feature (System will automatically turn OFF the DEBUG logs which will take care of any situations where support person forgets to turn OFF)
   * Challenges
     * Turn on debug for specific tenant without effecting performance hit in production. 
     * Need to manipulate log4net internals to come with solution to turn dynamic DEBUG for given tenant.
@@ -123,6 +148,14 @@ ______
 * HIS Framework
   * Purpose
     * Streamline the Core integration dev & test  & automation work
+  * Situation
+    * HIS is integration layer application which communicates to the core through different communiation, schema based on the backend service. Being legacy component it does not have any standards like interface approach, DI layers. This was making any new development to deveop new core integration is time consuming and developers were taking any where from 6months to 8 months.
+  * Task
+    * Develop framework for the developes to use to develop and concentrate develop effort just integration layer and let the framework take care of rest of the stuff (which integrates in to the application.) 
+  * Action
+    * Developed this framework with new design principles (like using SOLID principles) and integrate in thi integration layer.
+  * Result
+    * Today any new and existing development will make the development less than 1 month because of all layers (including unit and integraiton tests) were taken care by the framework.
   * Challenges
     * Develop framework to abstract the integration layer between Voyager and Core
     * Inject New DI  & Interface approach to the existing code and standardize the HIS development.
@@ -132,6 +165,14 @@ _____
 * RC4 Migration ( to AES )
   * Purpose
     * Move away legacy RC4 C++ code which has memory leak (Microsoft deprecated this library which has leak)
+  * Situation
+    * Legacy Online transaction processor application was using RC4 encryption for some of the sensitive information. As this not secure and deeply integrated in C++ using Microsoft deprecated libraries , it is time to move to AES encryption. As there is huge volume of encrypted data exists already, there should be migration which cannot afford any application downtime.
+  * Task
+    * Identify all the C++ code where this RC4 encryption is used and come up with AES encryption along with on the fly migration to migrate as the users logging in to the application.
+  * Action
+    * Developed a .NET managed library code to integrate in to C++. Also a migration strategy to migrate RC4 data to AES as the users logging on to the system, which can be configured at tenant level.
+  * Result
+    * System with AES encryption for most of the tenants (as some of the tenants still not migrated)
   * Challenge
     * Voyager platform has deeply integrated with legacy C++ code. Moving this code in to new managed AES encryption.
     * Come up with migration strategy is challenging as we have large amounts of encrypted data and cannot afford to do offline migration
@@ -141,6 +182,14 @@ ____
 * Façade Service
   * Purpose
     * Expose voyager DCOM layer as WCF service, so that clients can remove our VLB (custom component to communicate to Voyager) and use as first class service.
+  * Situation
+    * Online Transaction processor is 22+ years of legacy C++ DCOM application with custom router component used by the clients. As modren client applications being developed and in order to use this application there was a need to for service which can abstract this DCOM application.
+  * Task
+    * Develop a service which can abstract the client applications for this DCOM application.
+  * Action
+    * A WCF Facade service was developed to interact with legacy application which can be used as first class service by the clients. This facade service hides all the complexity of this DCOM application expsoing higher level services.  
+  * Result
+    * All Clients has been updated to use this facade service and get rid of custom router component in these client applications.
   * Challenge
     * As Voyager requests and responses were legacy ( done long back) and these types were not 100% compatible with WCF data types.
     * Has to extend low level WCF Schema generator to make it Voyager SDK types to work.
@@ -151,6 +200,15 @@ ____
 * Response Caching
   * Purpose
     * Cache package for API GET responses which are static for most of the time (This is part of client perf test)
+  * Situation
+    * A big client after migrating to the Platform observed significant latencies in users online sessions. During this period using dynaTrace monitoring tool , it was found that there are certain APIs is being called multiple times where the response does not change over the life time of user. As these APIs have significant backend calls along with decryption of certain fields can add some latency to the user sessions.
+    We need to quickly fix this latency by caching the immutable responses.
+  * Task
+    * Identified all the calls which can be potentially cached and develop a common response caching mechanism which can give insights in to at API and method level , to reduce the number of calls. 
+  * Action
+    * Developed a package and using Autofac as DI , injected this caching in to application without changing the actual application code.
+  * Result
+    * As a result , the number of calls reduced and hence the performance of the application improved making client happy.
   *  Challenges
     * Incorporate these caching without modifying the existing code and come up with auto config changes (Turn on/off feature dynamically).
 ______
@@ -158,6 +216,14 @@ ______
 * Stand-in
   * Purpose
     * Divert the traffic to Stand-in server in case of Core down.
+  * Situation
+    * Online users of a specific tenant are not able to do financial functionality whenever bank core is down(either planned or unplanned). As part of high available and reliable effort, online users should be able to do functionality (even though it is limited with reduced functionality) when the bank core is down(either planned or unplanned).
+  * Task
+    * Design and develop a solution in the platform and integrate in to stand-in server which has already cached information.  
+  * Action
+    * Modified the applicaiton layer so divert the traffic in case of core functionality available (both manual and auto) to communicate to internal stand-in server and make  mark the  session such that UI can take run act with limited functionality.
+  * Result
+    * Online application works now even if the bank core is down (either planned or unplanned)
   * Challenge
     * TP (C++) code has been modified to incorporate.
     * Bringing min HIS layer in to TP (we will avoid HIS layer completely in case of transaction going to stand-in).
@@ -166,6 +232,14 @@ ______
 * Concurrent session feature
   * Purpose
     * Notifications to users whenever the user logins happening multiple times within same time.
+  * Situation
+    * Online Application needs detect multiple login sessions originating from different locations/browsers and send notification to the users for security purpose. 
+  * Task
+    * Need to enhanced to application layer to detect these scenarios and raise notifications.
+  * Action
+    * Enhanced C++ component to use Rules engine and Redis as queuing mechanism raise notifications.
+  * Result
+    * Application detects security related logins and raises notification.
 
   * Challenges
     * As we have to intercept login in event in TP C++ code and login event is the critical path, we need to come up with some smart strategies to add this feature.
@@ -198,3 +272,12 @@ _____
 
 * What is your proudest professional accomplishment and why?
 _____
+
+* [RC4 vs AES](https://askanydifference.com/difference-between-aes-and-rc4-with-table/)
+  * AES is a block cipher, while RC4 is a stream cipher. Block encryption and stream encryption are symmetric algorithm classifications. A block cipher encodes plain text in block sizes, while a stream cipher encodes bit by bit, which is similar to the flow of a stream
+____
+
+* Windbg
+* Performance lab automation
+* Automation tools
+____
