@@ -40,6 +40,15 @@ ______
 * Host Integration Service
   * Purpose
     * Move from legacy C++ host server.exe (not scalable after 60 tenants)
+  * Situation
+    * Platform has legcy C++ application which communicates the core. This application is being launched by another service which configured for each tenant and its number of application instances. Because of windows limiations for the number of procesesing running and tenants being increased because of new clients, this application hosting is started showing the scalability and memory issues. In order to work with this and also move to managed C# code as service , the application needs to be rewritten to address some of these issues.As this is just framework and clients enhance this with plug-ins through COM objects and cannot affod to break any existing plug-ins as there are multiple plug-ins by different clients. 
+  * Task
+    * Design new application hosting in .NET managed service and be 100% compatible with existing plug-ins. As this is multi tenant application, the new service should be written such that tenant thottling so that no tenant can take over the system.
+  * Action
+    * Written a .NET managed WCF service to port C++ component. Able to finish the service before the big clients were brought in and also developed tenant throttling using WCF and IIS internals instead of developing custom code. Able to achieve 100% compatible with existing code and Migrated 200 clients from legacy multi application instance to single WCF service in phased approach over the period of time with zero downtime. 
+  * Result
+    * A WCF Single multi tenant with 100% backward plug-in compatible with tenant thorttling and application insights with windows performance counters.
+
   * Challenges
     * As Hostserver is framework and lot of code has been written as plug-in moving in to new C# WCF service and keeping the 100% compatible to this plug-in code is big challenge.
     * Has to come up with innovative way of Tenant level throttling
@@ -49,6 +58,15 @@ ______
 
 * Architectural change in HIS to communicate to Core for parallel processing
   * Purpose
+  * Situation
+    * A big client after migrating to the Platform observed significant latencies in users online sessions. After going through different layers of the application one issue was found that this client access to backend core has multiple calls to backend in order to gather user accounts information. Because of the serieal nature of this and based on the user profile some of these needed lot of calls and this was causing significant latency. The product had never framework to make these calls in parallel and asynchronous. This was high severity issue and also the legacy product does not have any framework and needed to be come up quick solution to make these calls async and parallel without effecting other tenant calls.
+  * Task
+    * Develop a framework for async, parallel calls with tenant thorttling and batch operations with timeouts incorporated.
+  * Action
+    * Used .NET TPL framework and simple memory queue architecture developed a framework where client plug-in can call to queue the batch operations and gather the responses.
+  * Result
+    * By incorporating batch operaitons client calls along with async and parallel, significant portion of the latency has been solved for the client making client happy.
+       
   * Operations from HIS to Core are synchronous and serial which make them slow when we have multiple calls needed to core to gather information. This is current G1CU issue.
   * Challenges
     * Whenever we introduce asynchronous and Parallel operations we need to take care of the following
