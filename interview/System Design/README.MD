@@ -51,3 +51,62 @@ ____
 
 ## Resources
 [system design questions](https://www.fullstack.cafe/blog/system-design-interview-questions)
+
+_____
+
+## Caching
+[resource](https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/)
+* Questions
+  * write heavy and reaas less frequently  (timed based logs)
+  * written once and read multiple times (User Profile)
+  * data returned always unique (search queries)
+
+* Cache-Aside
+  * cache placed logically at the side.
+  * works best for read-heavy workloads.
+  * TTL is used to make consistency with any writes.
+* Write-Through Cache
+  * written to the cache before the main memory/database
+  * it will increase write latency
+* Read-Through Cache
+  * cache sits inline with the database.
+  * best for read-heavy workloads
+  * In cache-aside, the application is responsible for fetching data from the database and populating the cache. 
+  * In read-through, this logic is usually supported by the library or stand-alone cache provider.
+  * Unlike cache-aside, the data model in read-through cache cannot be different than that of the database
+* Write-Back
+  * application writes the information to the cache that immediately acknowledges the changes, and after some dleay, it writes back to the database (also called __write-behind__)
+  * In mot relational database storage engines, such as InnoDB, the write-back cache is enabled by default in which the queries are written to mmemory at first and then flushed to the main disk later.
+  * disadvantage: if cache failure, the data may get permanently lost.
+* Write-Around
+  * Data is written in the database and only that data is stored into the cache which is read.
+
+## Database Scaling
+* Vertical Scaling
+* Horizontal Scaling (Sharding)
+  * Separates large databases in to smaller,more easily managed parts called shards
+  * Some complexities
+    * Resharding data
+      * Single sharding could no longer hold due to rapid growth.
+    * Celebrity problem ( Hotspot key problem)
+      *  Excessive access to a specific shard could cause server overload.
+    * Join and de-normalization.
+      * Hard to perform join operations across shards.
+
+## Some keys points for scalability
+* Keep web tier stateless
+* Build redundancy at every tier.
+* Cache data as much as you can
+* Support multiple data centers.
+* Host static assets in CDN
+* Scale your data tier by sharding
+* Split tiers into individual services
+* Monitor your system and use automation tools
+
+## Back of the envelope estimation.
+
+## System Design Interview Book
+* System design Prep: Page-41 
+
+## Some Hints
+* Friends , people connecting other people (like in organization managers->devs) : Consider GraphDB
