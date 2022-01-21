@@ -110,3 +110,16 @@ _____
 
 ## Some Hints
 * Friends , people connecting other people (like in organization managers->devs) : Consider GraphDB
+
+## Rest API
+* representational state transfer
+* data presentation for a client in the format that is convenient for it.
+* not a standard or protocol, this is an approach to or architectural style for writing API.
+* REST is an architectural style, and RESTful is the interpretation of it
+* HTTP statuses
+  * 1xx - informational
+  * 2xx - success
+  * 3xx - redirection
+  * 4xx - client error
+  * 5xx - server error
+  
