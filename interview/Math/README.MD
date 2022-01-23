@@ -7,3 +7,13 @@
   * [info](https://brilliant.org/wiki/rule-of-product/)
   * The rule of product states that if there are __n__ ways of doing something, and __m__ ways of doing another thing after that, then there are __n×m__ ways to perform both of these actions. In other words, when choosing an option for n __and__ an option for m, there are n×m different ways to do both actions.
 
+### Statistics
+* Mean - average (total/count)
+* Median - center (order and take middle, if more than )
+* Mode - number shows most
+* Standard deviation
+  * Measure of spread (data vary from the average)
+  * Low means close to average and high indicates data is spread out.
+  * ![standard deviation](../images/StandardDeviation.PNG)
+
+

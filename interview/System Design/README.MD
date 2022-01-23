@@ -123,3 +123,28 @@ _____
   * 4xx - client error
   * 5xx - server error
   
+  _____
+
+  ## Consistency hashing
+  * Minimized keys are redistributed when servers are added or removed
+  * It is easy to sale horizontally because data are more evenly distributed.
+  * Mitigate hotspot key problem.
+  * Real world systems
+    * Amazon dynamo db
+    * cluster in Apache cassandra
+    * Discord chat application
+    * Akamai CDN
+    * Maglev network load balabcer
+
+_____
+  ## Consistency Models
+  * Strong consistency
+    * any read operation returns a value corresponding to the result of the most updated write data item. A client never sees out-of-date data.
+    * not ideal for highly available systems
+    * could block new operations
+  * Weak consistency
+    * subsequent read operations may not see the most updated value.
+  * Eventual consistency
+    * This is specific form of weak consistency. Given enough time, all updates are propagated, and all replicas are consistent.
+* Replication gives high availability but causes inconsistencies among replicas
+* Versioning and vecvtor lcoks are used to solve inconsisteny problems
