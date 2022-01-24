@@ -9,3 +9,9 @@ ____
 * Automation tools
 ____
 
+## Abbrevations
+* **D**aily**A**ctive**U**ser (__DAU__)
+
+_____
+
+[zookeeper](https://www.youtube.com/watch?v=gZj16chk0Ss)
