@@ -253,6 +253,7 @@ _____
 * Tell me about a mistake that you’ve made. How did you handle it?
 
 * Can you tell me about a challenging situation you overcame at work?
+  * Convinencing the management for Voltage encrption integration strategy.
 
 * Tell me about a time you learned a new skill. How did you approach it and how to did you apply your new learnings?
   * COASP Azure Portal (Blazor and UI) 
@@ -262,7 +263,6 @@ _____
 
 * Tell me about a time when you overcame a conflict at work.
   
-
 * Explain a situation in which you would have handled things differently.
 
 * Tell me about a time you handled a stressful situation when you were under a lot of pressure.
@@ -271,6 +271,62 @@ _____
 * Can you tell me about a time you set and achieved a certain goal?
 
 * What is your proudest professional accomplishment and why?
+  * Charity contribtion to raise the money with conducting clases to kids and also Adults. 
+    * Chetana
+    * Sanakra Eye founcdation
+* Tell me about yourself
+  * I am a professional for last 30 years and saw various software methodologies for success and also failures. I am a curious learner all the way from begining. Even though I studied Mechanical engineering in the engineering my first job was software which was engineering product. I finished a courses in the reputed institute where they used to conduct for working people in the evenings. I learned assembly language, database archiecthres which helpmed in my my job. From there onwards it is always learning and applying in the job constantly.
+  * Good or bad, I cannot do a job with half knowledge. What I mean is unless I know the bootom of the architecture, technology which I am working or about to work I need to understand the whole picutre and will take time to learn all the aspects of it.
+  * I share the knowledge either at work or outside the work. In work I condut frequent brownbag sessions to share my learnings to the team and offter my time to whoever is interested in learning stuff.
+  * I have strong C,C++, C# and .NET techologies along with high scalable application architecture experience.
+  * Professional hobbies are : Upto date technoligies, learning new languages (python, javascript, go), doing some home projects in cloud.
+  * Personnel hobbies: running, hiking, playing Tennis.
+  * I am result oriented person meaning always measure whether it is personnel and professional measuring myself against actuals to correct myself constantly.
+
+* Can you tell me about a time you delivered excellent service to someone?
+  * Client performance test issue.
+* What skills do you have that you’ve noticed differentiate you from your peers?   
+  * End to end
+    * Whether it is feature, architectural change, I alway try analyze all the parts software lifecycle right from inception to running in production with operations.
+* What would your past or present colleagues say is the best thing about working with you?
+* Where do you want to be in three or five years?
+  * Involve in high scalable applications which real outside live 
+_____
+
+## Phone interview
+* What are u doing now / Tell me about yourself
+  * Mention role, company and duration of employment
+  * Share 2-3 key achievements
+  * Use numbers and escribe impacts when possible.
+
+* Why do you want to leave your current job?
+  * speak positively about your past employer
+  * Emphazie why you are excited about opportunity in the long term
+
+* When could you start a new job?
+  * Answer honestly and directly to support logistic coordination.
+
+* What are your salary expections?
+  * Deflect
+  * Ask the question back to the employer.
+
+* Details about the job description and company
+   * Quickly share your knowledge
+   * Ask the recruiter to tell you more
+   * Take notes on their description of what the hiring manager wants.
+  * Ask questions to help you frame your experience for future interviews
+
+* Tips
+  * use the notes
+  * convey enthusiasm
+  * designate an interview area
+  * show active listening skills
+  * keep it concise
+  * Tailor the information you share based on the job posting (customize to the job)
+  * Check your recruiter's professional profile.
+  * Prepare to concisely discuss important moments in your career
+
+[phone interview](https://www.indeed.com/career-advice/interviewing/phone-interview-tips-to-get-you-to-the-next-round)
 _____
 
 * [RC4 vs AES](https://askanydifference.com/difference-between-aes-and-rc4-with-table/)
@@ -281,4 +337,8 @@ ____
 * Performance lab automation
 * Automation tools
 ____
+
+
+[indeed career-advice](https://www.indeed.com/career-advice/interviewing/questions-to-ask-yourself-before-a-job-interview)
+
 
