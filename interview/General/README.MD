@@ -21,3 +21,9 @@ ____
 _____
 
 [zookeeper](https://www.youtube.com/watch?v=gZj16chk0Ss)
+
+_____
+
+[Directed Acyclic Graphs](https://hazelcast.com/glossary/directed-acyclic-graph/)
+
+_____
