@@ -6,6 +6,7 @@ using namespace std;
 class Solution
 {
 public:
+    // Time complexity: O(n) and space complexity O(n)
     vector<int> twoSum(vector<int> &nums, int target)
     {
         int returnSize = 0;
@@ -66,6 +67,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 }
 
 // bruite force
+// O(n^2) : two loops O(1) - no extra space
 int *twoSumBruteForce(int *nums, int numsSize, int target, int *returnSize)
 {
     *returnSize = 0;
