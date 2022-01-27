@@ -7,26 +7,7 @@ public class Solution
     // [["bat"],["nat","tan"],["ate","eat","tea"]]
     public IList<IList<string>> GroupAnagrams(string[] strs)
     {
-        // sort all of them.
-        // group by same
-        Array.Sort(strs);
-        return null;
-    }
-}
-
-namespace Exercise
-{
-    class Test
-    {
-        public static void Main()
-        {
-            string[] strs = new string[] { "eat", "tea", "tan", "ate", "nat", "bat" };
-            System.Console.WriteLine("__________________");
-            foreach (var s in strs)
-            {
-                System.Console.WriteLine(s);
-            }
-            System.Console.WriteLine("__________________");
+            var list = new List<IList<string>>();
             var dict = new Dictionary<string, List<string>>();
             foreach (var s in strs)
             {
@@ -43,14 +24,35 @@ namespace Exercise
                 }
             }
 
-            System.Console.WriteLine("__________________");
-            foreach(var kv in dict){
-                foreach(var l in kv.Value){
-                    System.Console.WriteLine(l);
+            foreach(var kv in dict)
+            {
+                var anagarams = new List<string>();
+                foreach(var l in kv.Value)
+                {
+                    anagarams.Add(l);
                 }
-                System.Console.WriteLine("-------------------------");
+                list.Add(anagarams);
             }
-            System.Console.WriteLine("__________________");
+
+            return list;
+    }
+}
+
+namespace Exercise
+{
+    class Test
+    {
+        public static void Main()
+        {
+            string[] strs = new string[] { "eat", "tea", "tan", "ate", "nat", "bat" };
+            Solution sl = new Solution();
+            var list = sl.GroupAnagrams(strs);
+            foreach(var l in list){
+                foreach(var a in l){
+                    Console.WriteLine(a);
+                }
+                Console.WriteLine("________________________________");
+            }
         }
     }
 }
