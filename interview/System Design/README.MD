@@ -152,10 +152,31 @@ _____
 
 _____
 
-## Tips
+## Interview Tips
 * Don't go in to details in the begining (like mentioning the protocols etc.,)
 * Don't go with some predetermined architecture ( don't try to fit your requirements in to architecture) 
 * KISS to start with
 * Avoid speaking without thinking through
 * Aware of tech (off the shelf )
 * Clarity/Flexibility/Knowledge
+
+_____
+## Additional info
+* Optimize process and increase throughput with the same resource
+* Pre preprocessing (using the system resources in non peak hours)
+* Avoid single point of failures.
+* Horizontal scaling
+* Microsoft services architecture
+* Load balancer
+* De coupling
+* Metrics (logging)
+* Flexibility
+
+_____
+
+[educative](https://www.educative.io/)
+
+____
+## Videos
+* Formats
+* Resolutions
