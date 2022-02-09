@@ -1,6 +1,13 @@
 using System;
 using System.Collections.Generic;
 
+// Time complexity
+// Sorting longest Key
+// K * Log(K)
+// N keys will make N * K * Log(K)
+// Space complexity
+// O(N*K)
+
 public class Solution
 {
     // ["eat","tea","tan","ate","nat","bat"]

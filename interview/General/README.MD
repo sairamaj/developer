@@ -27,3 +27,11 @@ _____
 [Directed Acyclic Graphs](https://hazelcast.com/glossary/directed-acyclic-graph/)
 
 _____
+
+### Exclidraw
+[resource](!https://www.youtube.com/watch?v=MaJ5jJwBRWs)
+* Shift will make square and circle
+* Use Lock button to create the same shapes
+* Alt will copy
+* Charts (copy the sample data to clipboard and use paste)
+* Embeding ![[filename]]
