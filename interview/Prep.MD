@@ -414,7 +414,22 @@ ____
 |What is your proudest professional accomplishment and why?|
 
 
+_____
 
 [indeed career-advice](https://www.indeed.com/career-advice/interviewing/questions-to-ask-yourself-before-a-job-interview)
 
+______
 
+Tell me about yourself?
+* job description, research about the company, role
+* Present
+  * I am a software advisory at Fiserv which is leading fintech company where I lead a team of developers. As a advisory role I was involved in major scalable and highly performant online and mobile banking platform.
+* Past
+  * I was with startup company which has been acquired current Fiserv company 12 years back.
+* Future
+  * I am looking for <architech/senior developer> position to challenge myself with greate technology companies.
+
+
+* Tailor it to the job requirements
+
+[tips](https://www.themuse.com/advice/tell-me-about-yourself-interview-question-answer-examples)
