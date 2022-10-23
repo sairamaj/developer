@@ -14,6 +14,8 @@
 * Initially it will be overwhelming by looking at the code but you don't have to understand entire code base at once. As you keep working on application understanding all connected application code is essential (at least integration layers)
 
 ## Lets apply this to Octa
+Before learning Octa one needs to understand the OAuth2.0 and [here is the simplified version of it](https://aaronparecki.com/oauth-2-simplified/)
+
 Start from here: [How Octa works](https://developer.okta.com/docs/concepts/how-okta-works/#what-you-can-do-with-okta)
 
 [Read this various entities - Don't worry if you don't understand. Just read and can come back to this again](https://developer.okta.com/docs/concepts/okta-data-model/)
@@ -38,6 +40,7 @@ Start from here: [How Octa works](https://developer.okta.com/docs/concepts/how-o
     It will ask for API token and at this time go to Okta admin portal and create token
     
   ```
+[Sample App React](https://github.com/okta/samples-js-react/tree/master/custom-login)
 [Using Octa from React app - client side](https://developer.okta.com/docs/guides/sign-into-spa-redirect/react/main/)
 
 [Using Octa from Java app - server side](https://developer.okta.com/docs/guides/sign-into-web-app-redirect/spring-boot/main/)

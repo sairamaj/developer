@@ -18,6 +18,10 @@
 * Two pointer approach
 * Careful with ++ and -- with precedences and assignments
 * Careful with expressions and use parenthesis for proper evaluation.
+* See whether dictionary can be used to minimize multiple passes in array (like storing already visited items)
+* In-place Array operations help to reduce space complexity
+* Think of moving backwards for arrays for smart operations.
+* Slow pointer, Fast  Pointer approach
 
 ### Links
 [Solving Techniques](https://javahungry.blogspot.com/2014/06/algorithm-problem-solving-techniques-or-approaches-for-software-programmer.html)
