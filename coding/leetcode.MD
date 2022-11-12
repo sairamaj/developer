@@ -22,6 +22,7 @@
 * In-place Array operations help to reduce space complexity
 * Think of moving backwards for arrays for smart operations.
 * Slow pointer, Fast  Pointer approach
+* Take all test cases including extremes (ex: empty array )
 
 ### Links
 [Solving Techniques](https://javahungry.blogspot.com/2014/06/algorithm-problem-solving-techniques-or-approaches-for-software-programmer.html)
