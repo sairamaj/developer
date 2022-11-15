@@ -31,3 +31,8 @@ if (numMap.find(i) == numMap.end())
     // prepending
     s.insert(pos, 1, (rem + 48));
 ```
+
+### string trimming
+```cplus
+s.erase(0, s.find_first_not_of('0'));
+```
