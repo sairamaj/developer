@@ -16,6 +16,8 @@
 ### Generic Tips
 * When something is halved at every step, it has a O(log, n) time complexity.
 * Two pointer approach
+  * Two pointers starts at different position: one starts at the beginning while another starts at the end;
+  * Two pointers are moved at different speed: one is faster while another one might be slower.
 * Careful with ++ and -- with precedences and assignments
 * Careful with expressions and use parenthesis for proper evaluation.
 * See whether dictionary can be used to minimize multiple passes in array (like storing already visited items)
