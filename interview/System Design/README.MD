@@ -51,8 +51,34 @@ ____
 
 ## Resources
 [system design questions](https://www.fullstack.cafe/blog/system-design-interview-questions)
+[CheatSheet](https://gist.github.com/vasanthk/485d1c25737e8e72759f)
+[Scalability for Dummies](https://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones)
+  * Clone (stateless)
+  * Database
+    * Sharding/DeNormalization/SQL tuning
+    * NO SQL
+  * Caching
+  * Asynchronous
+
+[Patterns](http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html)
+
+  * Load Balancer
+  * Scatter and Gather
+    * Dispatcher broadcasts the request to all workers in the pool (used in Yahoo and Google search to handle users search keyword)
+  * Result Cache
+ * Shared space (BlackBoard)
+   * all workers monitors information from the shared space and contributes partial knowledge back to the blackboard. The information is continuously enriched until a solution is reached.
+ * Pipe and Filter ( Data Flow Programming)
+   * All workers are connected by pipes where data is flow across.
+ * Map Reduce
+   * Targeting batch jobs where disk I/O is the major bottleneck. It uses distributed file system so that disk I/O can be done in parallel.
+   
+_____
+
+[NO SQL Pattern](http://horicky.blogspot.com/2009/11/nosql-patterns.html)
 
 _____
+
 
 ## Caching
 [resource](https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/)
@@ -146,7 +172,7 @@ _____
   * Weak consistency
     * subsequent read operations may not see the most updated value.
   * Eventual consistency
-    * This is specific form of weak consistency. Given enough time, all updates are propagated, and all replicas are consistent.
+    * This is specific form of weak consistency. Given enough time, all updates are propagated, and all replicas are consistent.o
 * Replication gives high availability but causes inconsistencies among replicas
 * Versioning and vecvtor lcoks are used to solve inconsisteny problems
 
@@ -180,3 +206,7 @@ ____
 ## Videos
 * Formats
 * Resolutions
+
+_____
+
+[Map Reduce in C#](https://developerzen.com/introduction-to-mapreduce-for-net-developers-1030e070698a)
