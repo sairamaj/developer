@@ -154,6 +154,45 @@ public class Solution
         return list;
     }
 
+    public IList<int> PostTraversalIterative(TreeNode root)
+    {
+        var list = new List<int>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.Push(root);
+        while (stack.Any())
+        {
+            TreeNode cur = stack.Pop();
+            list.Insert(0,cur.val);
+
+            if(cur.left != null){
+                stack.Push(cur.left);
+            }
+
+            if(cur.right != null){
+                stack.Push(cur.right);
+            }
+        }
+
+        return list;
+    }
+
+    public IList<int> PostTraversalRecursive(TreeNode root)
+    {
+        if (root == null)
+        {
+            return new List<int>();
+        }
+
+        var listLeft = PostTraversalRecursive(root.left);
+        var listRight = PostTraversalRecursive(root.right);
+
+        var list = new List<int>();
+        list.AddRange(listLeft);
+        list.AddRange(listRight);
+        list.Add(root.val);
+        return list;
+    }
+
     public IList<int> PreorderTraversal(TreeNode root)
     {
         var values = new List<int>();
@@ -199,16 +238,19 @@ public class Solution
     {
         var items = new List<int>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        
+
         TreeNode cur = root;
         while (cur != null || stack.Any())
         {
-            while(cur != null){
+            while (cur != null)
+            {
+                System.Console.WriteLine($"pushing: {cur.val}");
                 stack.Push(cur);
                 cur = cur.left;
             }
-            
+
             cur = stack.Pop();
+            System.Console.WriteLine($"poped: {cur.val}");
             items.Add(cur.val);
             cur = cur.right;
         }
@@ -263,7 +305,7 @@ public class Test
     public static void Main()
     {
         Solution sol = new Solution();
-        sol.Build(new int?[] { 1, null, 2, 3 });
+        //sol.Build(new int?[] { 1, null, 2, 3 });
         sol.Build(new int?[] { 3, 1, 2 });
         sol.Print();
         System.Console.WriteLine("____________________---");
@@ -297,5 +339,16 @@ public class Test
             System.Console.WriteLine(item);
         }
 
+        System.Console.WriteLine("____________Port order(recursive)_________________");
+        foreach (var item in sol.PostTraversalRecursive(sol.Root))
+        {
+            System.Console.WriteLine(item);
+        }
+
+        System.Console.WriteLine("____________Port order(interactive)_________________");
+        foreach (var item in sol.PostTraversalIterative(sol.Root))
+        {
+            System.Console.WriteLine(item);
+        }
     }
 }
