@@ -1,3 +1,52 @@
+### Diagrams
+  * Black diagram
+  * Use proper draws
+### Estimates
+  * Latency
+  * Throughput (approx)
+                        (Reads per second)    (writes per second)
+      RDBMS             10000      5000
+      Distributed Cache 100,000    100,000
+      Message Qeuue     100,000    100,000
+      NO SQl            20,000-50,000    10,000 - 25,000 
+  * Capacity
+
+### Load balancers
+  * Resilience, Scalability
+  * Reverse Proxy
+  * Strategies
+  * Types
+    * Layer 4
+      * Transport Layer
+      * TCP or UDP, IP, Port
+    * Layer 7
+      * Application layer
+      * Acces to Http Headers, cookies.
+### CDNs
+  * Push
+  * Pull
+### Caching
+  * Strategies
+    * Cache Aside (common pattern)
+    * Read through (same as above, the responsibility of fetching from actual data store is in cache module)
+    * Write through
+    * Write Behind  (buffer the writes and laster commits to db later.)
+  * Eviction Policies
+    * LRU (List recently used)
+       * faster and cheaper
+       * linked lists
+    * LFU ( List fequently used)
+### Queues
+  * Queue
+  * Pub/Sub  (notification )
+
+### TCP 
+### UDP
+  * Monitoring metrics
+  * Video streaming
+  * Gaming
+  * can you afford losing someo of the data?
+  
 ## CAP theorem
 This states that it is not possible for a distributed computer system to simultaneously provide all three of the following guarantees:
 
