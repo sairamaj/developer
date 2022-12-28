@@ -1,64 +1,3 @@
-/*
-Given two integer arrays inorder and postorder where inorder is the inorder traversal of a 
-binary tree and postorder is the postorder traversal of the same tree, 
-construct and return the binary tree.
-*/
-
-/*
-Example:
-    Input: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
-    Output: [3,9,20,null,null,15,7]
-
-                        3
-                      /   \
-                    /      \
-                    9       20
-                            /  \
-                           /    \
-                          15     7
-*/
-
-/*
-    Strategy:
-        Observations:
-                - root node can be obtained from post order last element: 3
-                - from post order we can see the from back we can construct right side.
-        Intution:
-            - start from In order
-            - Keep constructing tree
-            - Keep change root
-            - stop once root is obtained (as we already know the root from post order as each element is unique as per constraint)
-            - At this point we are pretty much done on left side
-            - Now start from right
-        Example:
-                    3
-                9       20
-            input: in order [9,3,20] post order: [9,20,3]
-            expected: [3,9,null,null,20]
-
-            root node: 3 (last of post order)
-            start from in order:
-                prevNode: 9:
-                
-            next: 3
-                3==3 (root node)
-                curNode = 3
-                curNode.left = prevNode
-                rootNode = curNode.
-                rootleftNode = 9
-
-            at this time we are done constructing left.
-            start from post order:
-                next: 20
-                    root.right = 20
-                    curNode = 20
-                next: 9
-                we have reached leftNode. so we are done.
-
-    Leet code
-        - Use in order to find out the left or right
-*/
-
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -83,12 +22,12 @@ public class Solution
     IDictionary<int, int> _inorderIndex = new Dictionary<int, int>();
     int _currentPostIndex;
     int[] _inOrder;
-    int[] _postOrder;
+    int[] _preOrder;
 
-    public TreeNode BuildTree(int[] inorder, int[] postorder)
+    public TreeNode BuildTree(int[] inorder, int[] preorder)
     {
         this._inOrder = inorder;
-        this._postOrder = postorder;
+        this._preOrder = preorder;
         // build to find out quickly about the current root in in order
         for (var i = 0; i < inorder.Length; i++)
         {
@@ -96,29 +35,46 @@ public class Solution
         }
 
         // start with last index as this is the root.
-        this._currentPostIndex = postorder.Length - 1;
+        this._currentPostIndex = 0;
         return Build(0, inorder.Length - 1, false);
+    }
+
+    void PrintInOrder(string title, int start, int end)
+    {
+        System.Console.WriteLine($"________ In Order:{title} ___________");
+        for (var i = start; i <= end; i++)
+        {
+            System.Console.Write($"{this._inOrder[i]},");
+        }
+        System.Console.WriteLine("\n____________________________");
     }
 
     private TreeNode Build(int in_left, int in_right, bool isLeft)
     {
-        //System.Console.WriteLine($"in_left:{in_left} in_right:{in_right}: isLeft:{isLeft}");
+        System.Console.WriteLine($"in_left:{in_left} in_right:{in_right}: isLeft:{isLeft}");
+        if (this._currentPostIndex == this._preOrder.Length)
+        {
+            return null;
+        }
         if (in_left > in_right)
         {
+            System.Console.WriteLine($"Done isLeft:{isLeft}");
             return null; // we are done in order which is used only to find out whether it is left or right.
         }
 
         // get the root node from post
-        var rootValue = this._postOrder[this._currentPostIndex];
-        //System.Console.WriteLine($"Current root:{rootValue}");
+        var rootValue = this._preOrder[this._currentPostIndex];
+        System.Console.WriteLine($"Current root:{rootValue}");
         var node = new TreeNode(rootValue);
-        this._currentPostIndex--;
-
+        this._currentPostIndex++;
         // get the index in the in order.
         var inOrderIndex = this._inorderIndex[rootValue];
+
+        PrintInOrder("Left", 0, inOrderIndex - 1);
+        PrintInOrder("Right", inOrderIndex + 1, in_right);
         // now construct right nodes.
+        node.left = Build(0, inOrderIndex - 1, true);
         node.right = Build(inOrderIndex + 1, in_right, false);
-        node.left = Build(in_left, inOrderIndex - 1, true);
         return node;
     }
 
@@ -195,7 +151,7 @@ public class Solution
         PrintInOrder(node);
     }
 
-        public void Print3(TreeNode node)
+    public void Print3(TreeNode node)
     {
         if (node == null)
         {
@@ -204,7 +160,6 @@ public class Solution
 
         PrintPostOrder(node);
     }
-
 }
 
 class Test
@@ -213,11 +168,10 @@ class Test
     {
         Solution sol = new Solution();
         int[] inOrder = new int[] { 9, 3, 15, 20, 7 };
-        int[] postOrder = new int[] { 9, 15, 7, 20, 3 };
+        int[] preOrder = new int[] { 3, 9, 20, 15, 7 };
 
-        TreeNode root = sol.BuildTree(inOrder, postOrder);
-        System.Console.WriteLine($"root:{root.val}");
-        //sol.Print(root);
+        TreeNode root = sol.BuildTree(inOrder, preOrder);
+        sol.Print(root);
         //sol.Print2(root);
         //sol.Print3(root);
     }
