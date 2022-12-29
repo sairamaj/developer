@@ -1,0 +1,1 @@
+* Use pseudo node to make it easy to manipulate when adding or removing , changing the links.
