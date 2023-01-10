@@ -11,8 +11,12 @@ class SumTest
         this._array = array;
     }
 
-    public List<int> CanSumInternal(int target, Stack<int> values)
+    public IList<int> CanSumInternal(int target, IDictionary<int, IList<int>> values)
     {
+        if (values.TryGetValue(target, out var val))
+        {
+            return val;
+        }
         if (target < 0)
         {
             return null;
@@ -22,22 +26,26 @@ class SumTest
             return new List<int>();
         }
 
+        IList<int> shortest = null;
         for (var i = 0; i < this._array.Length; i++)
         {
             var output = CanSumInternal(target - this._array[i], values);
             if (output != null)
             {
                 output.Add(i);
-                return output;
+                if (shortest == null || output.Count < shortest.Count)
+                {
+                    shortest = output;
+                }
             }
         }
 
-        return null;
+        return shortest;
     }
 
-    public List<int> CanSum(int target)
+    public IList<int> CanSum(int target)
     {
-        Stack<int> values = new Stack<int>();
+        var values = new Dictionary<int, IList<int>>();
         return this.CanSumInternal(target, values);
     }
 }
@@ -46,9 +54,10 @@ public static class Test
 {
     public static void Main(String[] args)
     {
-        var input = new int[] { 12, 13, 14, 15, 5, 3, 4, 8 };
+        //var input = new int[] { 2, 3, 4, 12, 13, 14, 15, 5, 3, 4, 8 };
+        var input = new int[] { 1, 4, 5 };
         SumTest s = new SumTest(input);
-        var output = s.CanSum(4);
+        var output = s.CanSum(9);
         if (!output.Any())
         {
             System.Console.WriteLine("Not found.");
