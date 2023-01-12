@@ -93,3 +93,53 @@ int expoptimization(int n, int m)
 }
 ```
 
+* taylor series ( revisit)
+
+* Sorting
+  * Number of comparisions
+  * Number of swaps
+  * Adaptive
+  * Stable
+    * Order will not change.
+  * Extra memory
+  * Comparision Sorts
+     * O(n^2)
+       * Bubble
+         * Used for finding out k top elements. (just do k passes.)
+         ```cmd
+          for(int i=0; i<n-1; i++){
+            for(j=0; j<n-1-i; j++>){  // note: j<n-1-i
+              if( a[j] < a[j+1] )
+              {
+                swap(&a[j],&a[j+1])
+                isswapdone = true;
+              }
+            }
+            if(!isswapdone){
+              break;    // no need to do further as all are sorted ( adaptive)
+            }
+          }
+         ```
+       * Insertion
+          * Idea of inserting an element in existin sorted list.
+          * Take 1 element which is sorted by default and start insert new element.
+          * Designed for linked list.
+       * Selection
+           * Select position.
+           * k passes gives k sorted elements.
+       * QuickSort
+           * element is in sorted if all the elements to left are less and all the elements are right or more.
+    * O(nlogn)
+       * Heap 
+       * Merge
+       * Quick
+       * Tree
+    * O(n^3/2)
+       * Shell
+  * Index based sorts (takes extra space)
+      * O(n)
+        * Count
+        * Bucket/Bin
+        * Radix
+
+    
