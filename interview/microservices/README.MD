@@ -1,0 +1,1 @@
+Strangular Pattern  for converting monolithic to micrososervice.
