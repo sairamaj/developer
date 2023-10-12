@@ -337,13 +337,85 @@ _____
     * Chetana
     * Sanakra Eye founcdation
 * Tell me about yourself
-  * I am a professional for last 30 years and saw various software methodologies for success and also failures. I am a curious learner all the way from begining. Even though I studied Mechanical engineering in the engineering my first job was software which was engineering product. I finished a courses in the reputed institute where they used to conduct for working people in the evenings. I learned assembly language, database archiecthres which helpmed in my my job. From there onwards it is always learning and applying in the job constantly.
-  * Good or bad, I cannot do a job with half knowledge. What I mean is unless I know the bootom of the architecture, technology which I am working or about to work I need to understand the whole picutre and will take time to learn all the aspects of it.
-  * I share the knowledge either at work or outside the work. In work I condut frequent brownbag sessions to share my learnings to the team and offter my time to whoever is interested in learning stuff.
+_____________________
+
+  * Template
+		* Present
+		* Past
+		* Future
+		
+	* Present
+	  * Hi , My name is Sairama Jamalapuram and I go by Sai(first 3 letters). At the moment I am the ream leader of a group of software engineers and it has been a really rewarding and challenging experience.
+	position.
+	* Past
+	  * Before that I worked as senior developer (various other - fill here )
+	* Future
+	   I would love to advance in my career with higher role. 
+
+________
+  * Hi , My name is Sairama Jamalapuram and I go by Sai(first 3 letters). I did masters from reputed University (IIS - Chennai). Have been in the industry for long time.
+  * Started my career with Microsoft DOS.
+  * I am a professional for last 30 years and saw various software methodologies for success and also failures. 
+  * In my current job at Fiserv , a tech leader responsible for Online banking platform.
   * I have strong C,C++, C# and .NET techologies along with high scalable application architecture experience.
-  * Professional hobbies are : Upto date technoligies, learning new languages (python, javascript, go), doing some home projects in cloud.
-  * Personnel hobbies: running, hiking, playing Tennis.
-  * I am result oriented person meaning always measure whether it is personnel and professional measuring myself against actuals to correct myself constantly.
+  * Professional hobbies are : Upto date technoligies, learning new languages , doing some home projects in cloud and some community work with some cool technologies which I cannot do at my work.
+  * Personnel hobbies: running, hiking, playing Tennis and teaching techology to kids as part of charity work.
+  * I am result oriented person meaning always measure whether it is personnel or professional measuring myself against actuals to correct myself constantly.
+_____________________
+
+* What are your key strengths/strong points?
+ * I am good at ( + verb + ing )
+   * meeting deadlines
+   * helping others
+   * taking from requirement to production and support for big features
+   * Working as part of a team
+   * Working with clients.
+   * Solving problems.
+ * I am very ( + adjective)
+   * fast learner
+   * flexible (ready to do any job if the team requires it)
+   * adaptable to change.
+ * I have  ( +noun)
+    * good listening skills
+	* analytical skills
+	* very strong work ethic
+      * what you are supposed todo it (quote Gita)
+	  
+ex:
+	I'am good at working as part of a team, I always do my best to deliver mywork on time, solving problems, I always try to think of something to do or improve a process or organize it.
+	I'am really good at motivating and leading people, I have been a team leader for several years and over the years I have learned to see the best characteristics in the team and make sure each team member is playing to their strengths.
+	
+_______
+* Why should we hire you? 
+  * this is similar to above question.
+  * Research the position. Make answers specific for the job.
+    * I think my experience and skill make me suitable for the job.
+	* I can ofer a lot to the company with my skills
+	* suitable and good match.
+_____________________
+* What are your weaknesses ?
+ * Confession & Recovery
+ * I feel that my english is my weakest point 
+   * But I am working on 
+________________________
+* Where do you see yourself in 5 years?
+ * In the next 1 to 2 years....
+ *  In the next 
+  
+________________________________
+* Why do you want this job?  
+  * Research ....
+  * I think ...
+  * I see this job as ...
+  * I(really) feel that this job is ...
+  * In my opinion ...
+
+_____________________  
+* wWhy do you want to leave this job?
+* I have been at my current job for x now. and have learned a lot form working with some amzing people. but , I am starting to feel like I need some new challlenges. I'am interested in this position because it will give me new challenges and opportuniities to grow in the company.
+
+_____________________
+
 
 * Can you tell me about a time you delivered excellent service to someone?
   * Client performance test issue.

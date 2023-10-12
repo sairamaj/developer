@@ -33,3 +33,19 @@
     * host
     * source
     * source_type     
+	
+|stats count by <fieldname>
+* basic search
+  * just type the string to search
+  * AND, OR and NOT  ( AND is implict)
+* Search mode
+  * Fast
+  * Verbose
+  * Smart
+* misc
+  * unique
+  * table
+* save reports
+  * Schedule reports (Edit-> Schedule)
+* add ons / apps
+  * apps comes up with pre built dashboards
