@@ -1,0 +1,5 @@
+https://www.youtube.com/watch?v=ARvQcqJ_-NY
+- Greedy
+    - solution 
+    - feasible solution (can be multiple)
+    - Optimal solution (only one)

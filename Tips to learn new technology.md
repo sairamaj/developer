@@ -56,3 +56,14 @@ Start from here: [How Octa works](https://developer.okta.com/docs/concepts/how-o
   * B2C, B2E, B2B
   * MFA, SSO
   * Identity management
+
+____
+base64 encode and decode
+use wsl
+at command
+```cmd
+  echo -n "123456" | base64
+  echo "MTIzNDU2Cg==" | base64 -d
+```
+
+____
