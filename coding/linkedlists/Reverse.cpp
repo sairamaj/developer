@@ -2,6 +2,7 @@
     Design linked list.
 */
 #include <stdio.h>
+#include <conio.h>
 
 class Node
 {
@@ -182,6 +183,31 @@ public:
         printf("\n");
     }
 
+    Node *reveseInternalRecursive(Node *node)
+    {
+		printf("Node:%d\n",node->val);
+		if(node == NULL || node->next == NULL )
+		{
+			return node;
+		}
+		
+		if(node->next->next == NULL)
+		{
+			printf("end reached:%d\n", node->next->val);
+			Node *head = node->next;
+			printf("end: linking:%d to %d\n",head->val, node->val);
+			head->next = node;
+			printf("head:%d head->next:%d\n",head->val, head->next->val);
+			return head;		// reached the end.
+		}
+
+	    
+		Node *newHead = reveseInternalRecursive(node->next);
+		printf("linking:%d to %d\n",node->next->val, node->val);
+		node->next->next = node;
+		return newHead;
+	}
+	
     Node *reveseInternal(Node *node)
     {
         // 1->2->3->4->5
@@ -210,9 +236,17 @@ public:
 
         return current;
     }
+
     void reverse()
     {
         this->head = reveseInternal(this->head);
+    }
+	
+    void reverseRecurisve()
+    {
+        Node* oldHead = this->head;
+		this->head = reveseInternalRecursive(this->head);
+		oldHead->next = NULL;
     }
 };
 
@@ -409,14 +443,17 @@ void reverse()
     list.addAtTail(1);
     list.addAtTail(8);
     list.addAtTail(4);
-    list.addAtTail(5);
+    //list.addAtTail(5);
     // for (int i = 5; i > 0; i--)
     // {
     //     list.addAtHead(i);
     // }
     list.print();
     printf("----------- Reversed -----------------\n");
-    list.reverse();
+    //list.reverse();
+	printf("Press any key...\n");
+	getch();	
+	list.reverseRecurisve();
     list.print();
 }
 

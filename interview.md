@@ -51,3 +51,21 @@
 
 [TOGAF](https://pubs.opengroup.org/architecture/togaf9-doc/arch/?ref=wellarchitected-wp)
 [Zacman Framework](https://www.zachman.com/about-the-zachman-framework?ref=wellarchitected-wp)
+
+* Build stories
+  * Client success stories
+  * Other stories
+  * 4 aspects
+     * one or two words.
+	 * make people feel 
+	 * point of the story
+	 * one or two details to bring life (dialogs)
+  * practice
+  
+* Delivery
+  * record
+    * listen
+	  * with closed eyes
+	  * with mute
+	  * with both audio and video.
+	  
