@@ -9,6 +9,32 @@
   * Efficiency
   * Concurrency
   * Capacity
+* System Performance objectives
+  * Minimize Request-Response latency
+    * measure in time units.
+	  * depends on
+		* wait/idle time
+		* processing time.
+  * Maximize throughput.
+    * measured s rate o request processing.
+	  * depends on
+		* latency
+		* capacity
+* Minimize network latency
+  * Persistent connections
+  * Static data caching
+  * SSL Session caching
+  * Data format  & compression
+  * Connection pool
+* Memory
+  * GC
+  * Large heap memory
+  * Fininite buffer memory (something for database)
   
+[SOLID](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
+
+ 
+ 
+ 
 
 	

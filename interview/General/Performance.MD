@@ -14,7 +14,7 @@ ex:
 
 * 90% percentile 
   * Gives the confidence of stability of the application
-  * Eliminates the unusal spikes from the response
+  * Eliminates the unusual spikes from the response
   * Real-world sense
   * Indicates the stability of the application if the ratio of the average response time and 90th percentile is constant (see how close mean(avg) is to this value)
 
@@ -35,4 +35,4 @@ ex:
   * ![standard deviation](../images/PerfStandardDeviation.PNG)
   * Shows the consistency and stability of the application( lower the value more stability)
 
- 
+* Tail latency.
