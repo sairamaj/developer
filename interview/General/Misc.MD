@@ -92,7 +92,35 @@ find out the bad one with using weigh machine only once.
 ____
 link chain of 5 with less
 ______
-___
+13 caves: police & theif:
+[here](https://www.youtube.com/watch?v=cNFX2FOoE-s)
+
+_____
+
+[Ages of 3 kids](https://www.youtube.com/shorts/HGAw-Fqy9Lc)
+ 
+____
+
+[cammel & banana](https://www.geeksforgeeks.org/puzzle-15-camel-and-banana-puzzle/)
+
+____
+
+[10 balls in 5 lines](https://www.geeksforgeeks.org/puzzle-10-balls-in-5-lines/)
+______
+
 free lancer
   upwork/fiverr/freelancer/peopleperhour/angellist
 
+_______________
+
+[rectangle puzzle](https://www.youtube.com/watch?v=3qOOnEr9kl4)
+
+_______________
+
+[avg salary](https://www.youtube.com/watch?v=2W8JWXjoL2U)
+
+_________
+
+[password problem](https://www.youtube.com/watch?v=6Z5LqovJiUs)
+
+____
