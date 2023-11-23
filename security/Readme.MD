@@ -72,5 +72,9 @@
     * PATH - Set subfolder and pages for which the cookie is available.
     * EXPIRES - Determine when the cookie should be deleted.
     
-
+* MAC
+  * Message Authentication Code
+  * Concept of combining Message + Secret Key when calculating Digest
+  * Provies **Integrity** and **Authentication** for bulk data transfer
+  * HMAC - Industry standard implementation of MAC (tells how one will combine the message + key)
     
