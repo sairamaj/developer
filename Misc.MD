@@ -21,3 +21,8 @@ doign lot of things at once
 
 ### Semantic Version
 Semantic version numbers have three numeric components, Major.Minor.Patch. When you fix a bug, you increment the patch (1.0.0 to 1.0.1). When you release a new backward-compatible feature, you increment the minor version and reset the patch version to 0 (1.4.17 to 1.5.0). When you make a backward-incompatible change, you increment the major version and reset the minor and patch versions to 0 (2.6.5 to 3.0.0).
+
+[logn4](https://towardsdatascience.com/logarithms-exponents-in-complexity-analysis-b8071979e847)
+
+* dynamic programming
+  *	This problem has two important attributes that let us know it should be solved by dynamic programming. First, the question is asking for the maximum or minimum of something. Second, we have to make decisions that may depend on previously made decisions, which is very typical of a problem involving subsequences.
