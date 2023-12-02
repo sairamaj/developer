@@ -1,0 +1,16 @@
+{
+    "name": "sai",
+    "age" : 26,
+    "hobbies":[
+        {
+            "id" : 1,
+            "game" : "tennis",
+            "level": 6
+        },
+        {
+            "id" : 2,
+            "game" : "cricket",
+            "level": 5
+        }
+    ]
+}
