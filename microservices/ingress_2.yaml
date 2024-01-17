@@ -1,0 +1,30 @@
+# https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-test-ingress
+  namespace: default
+  annotations:
+     nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: kubetest.sairama.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: httpd-service
+            port:
+              number: 80
+
+      - path: /test(/|$)(.*)
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: httpbin-service
+            port:
+              number: 80

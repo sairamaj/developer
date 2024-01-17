@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: httpbin-app
+  name: httpbin-app
+spec:
+  containers:
+  - image: kennethreitz/httpbin
+    name: deployment
+status: {}

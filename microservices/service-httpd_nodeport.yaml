@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: httpd-app
+  name: httpd-service
+spec:
+  ports:
+  - name: httpd-service
+    port: 9000
+    protocol: TCP
+    targetPort: 80
+  type: NodePort
+  selector:
+    app: httpd-app
