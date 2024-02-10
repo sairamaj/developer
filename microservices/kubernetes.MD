@@ -102,3 +102,9 @@
     * Dev/Test
   * RollingUpdate
 
+* Executing commands using Busybox
+  * kubectl run curl --image=radial/busyboxplus:curl -i --tty
+    * nslookup
+  * kubectl attach <POD ID> -c curl -i -t
+  * kubectl delete deployment curl 
+    

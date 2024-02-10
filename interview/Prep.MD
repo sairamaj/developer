@@ -308,7 +308,6 @@ ______
 
 _____
 
-<<<<<<< HEAD
 * Give me an example of a difficult problem you solved. How did you solve this problem?
   * Config Service Redis Integration
 

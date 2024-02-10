@@ -19,7 +19,7 @@ _______________
 * In another command window
 
   ```cmd
-    **curl http://localhost:8000**
+    curl http://localhost:8000**
   ```
 
 * docker run -p 8001:80 kennethreitz/httpbin
