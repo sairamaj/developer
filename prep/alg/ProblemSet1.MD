@@ -78,3 +78,57 @@
 </details>
 
 ___
+
+## Finding a Needle in Heystack
+
+<details>
+   <summary>Two Loops</summary>
+   
+   <details>
+      <summary>Logic</summary>
+
+* Loop through hey stack
+* Loop through neele stack
+  * Check each match
+    * If no match break
+    * Check reached at the end of needle
+    * If reached, return hey stack index.
+
+   </details>
+
+   <details>
+     <summary>Code</summary>
+```python
+# sabsad
+# sad
+# 
+def find_needle_in_heystack(hey_stack, needle):
+    h = len(hey_stack)
+    n = len(needle)
+
+    for i in range(h):
+        
+        # start from current i
+        j = i
+        for k in range(n):
+            if hey_stack[j] == needle[k]:
+                # matched keep moving
+                j = j+1
+            else:
+                break
+            
+            # check whether we have reached to last index of the needle
+            if k == n-1:
+                return i
+   
+    return -1
+
+pos = find_needle_in_heystack("sasad", "sad")
+print(f'needle position: {pos}')
+
+pos = find_needle_in_heystack("leetcode", "leeto")
+print(f'needle position: {pos}')
+
+```
+   </details>
+</details>
