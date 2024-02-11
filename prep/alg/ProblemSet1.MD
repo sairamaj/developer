@@ -147,6 +147,7 @@ ____
 * ransomNotes can be constructed from the letters in magazine. Letters in magazine can be used only once.
 * ex: "aa" can be constructed from "aab"
 * "aab" cannot be constructed from "ab"
+* [source](https://www.youtube.com/shorts/7IyE3RgHap0)
   </details>
   
   <details>
