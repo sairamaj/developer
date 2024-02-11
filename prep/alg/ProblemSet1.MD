@@ -132,3 +132,58 @@ print(f'needle position: {pos}')
 ```
    </details>
 </details>
+
+____
+
+## Ransom Notes
+
+<details>
+
+  <summary>Can ransome notes be constructed from magazine</summary>
+
+  <details>
+     <summary>info</summary>
+
+* ransomNotes can be constructed from the letters in magazine. Letters in magazine can be used only once.
+* ex: "aa" can be constructed from "aab"
+* "aab" cannot be constructed from "ab"
+  </details>
+  
+  <details>
+  <summary>program</summary>
+
+```python
+def canConstruct(ransom :str, magazine : str) -> bool:
+    letters = {}
+    
+    # load leters in to dictionary
+    for l in magazine:
+        if l in letters:
+            letters[l] += 1     # increment
+        else:
+            letters[l] = 1
+    #print(letters)
+    
+    # check from ransom whether each letter contains in letters
+    for c in ransom:
+        if c not in letters:
+            return False        # return immeidatley as we cannot construct
+        if letters[c] == 1:
+            del letters[c]      # if there is only 1 , delete from dictionary
+        else:
+            letters[c] -= 1
+    
+    return True     # we come here means we have all the letters to construct ransom
+            
+
+ransomNote = "ab"
+magazine = "aab"
+ret = canConstruct(ransomNote, magazine)
+print(f"can construct {ransomNote} from {magazine}  {ret}")
+
+```
+
+</details>
+
+
+</details>
