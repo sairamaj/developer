@@ -151,7 +151,7 @@ ____
   </details>
   
   <details>
-  <summary>program</summary>
+  <summary>Code</summary>
 
 ```python
 def canConstruct(ransom :str, magazine : str) -> bool:
@@ -188,3 +188,51 @@ print(f"can construct {ransomNote} from {magazine}  {ret}")
 
 
 </details>
+
+____
+
+## Longest Common Prefix
+<details>
+  <summary>Function to find the longest common prefix strings amongst any array of strings</summary>
+<details>
+    <summary>Logic</summary>
+
+```python
+# Pick a item from the list and start looking for each chacter in all the string to match
+#       2 straties to pick
+#           first one
+#           go through list and find out the minimum one.
+#   For each character in selected item
+#       For each string 
+#           If no match
+#               return result
+#       append to result
+#   return result```
+```
+  </details>
+
+  <details>
+    <summary>Code</summary>
+
+```python
+def longest_prefix(strs : list[str]) -> str:
+    result = ""
+    
+    for i in range(len(strs[0])):
+        for s in strs:
+            if len(s) == i or strs[0][i] != s[i]:
+                return result
+        result += strs[0][i]
+
+    return result
+
+
+
+print(longest_prefix(['flower','flight', 'flow']))
+print(longest_prefix(['flower', 'flow']))
+
+```
+
+  </details>
+</details>
+
