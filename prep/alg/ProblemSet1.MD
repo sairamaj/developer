@@ -288,3 +288,46 @@ print(last_world_length("    "))
   </details>
 
 </details>
+
+____
+## Sub sequence
+<details>
+   <summary>Find string (ex:abc) is subsequence in another string(ahfbc)</summary>
+   <details>
+    <summary>Logic</summary>
+
+```python
+#   s1:"abc"  s2:"ahgbc"  (True)
+#  
+#   i : s1 , j:s2
+#   loop through s2
+#     if match
+#       move i, j
+#     else
+#       move j
+#     if s1 reached
+#       return tru
+#   end of loop means did not match, return false
+#   
+```
+   </details>
+  <details>
+     <summary>Code</summary>
+
+```python
+def is_subsequence(s1: str, s2: str) -> bool:
+    # todo: error conditions
+    j = 0
+    for i in range(len(s2)):
+        if s2[i] == s1[j] :
+            j += 1
+        if j == len(s1):
+            return True
+    return False
+        
+
+print(is_subsequence("abc","ahgbc"))
+print(is_subsequence("abc","ahgb"))
+```
+  </details>
+</details>
