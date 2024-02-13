@@ -1,4 +1,4 @@
-## Check a given number is Power of 2
+#### Check a given number is Power of 2
 
 <details>
 
@@ -79,16 +79,15 @@
 
 ___
 
-## Finding a Needle in Heystack
-
 <details>
-   <summary>Two Loops</summary>
+
+   <summary>Finding a Needle in Heystack</summary>
    
    <details>
       <summary>Logic</summary>
 
 * Loop through hey stack
-* Loop through neele stack
+* Loop through needle stack
   * Check each match
     * If no match break
     * Check reached at the end of needle
@@ -135,14 +134,12 @@ print(f'needle position: {pos}')
 
 ____
 
-## Ransom Notes
-
 <details>
 
   <summary>Can ransome notes be constructed from magazine</summary>
 
   <details>
-     <summary>info</summary>
+     <summary>Logic</summary>
 
 * ransomNotes can be constructed from the letters in magazine. Letters in magazine can be used only once.
 * ex: "aa" can be constructed from "aab"
@@ -191,7 +188,6 @@ print(f"can construct {ransomNote} from {magazine}  {ret}")
 
 ____
 
-## Longest Common Prefix
 <details>
   <summary>Function to find the longest common prefix strings amongst any array of strings</summary>
 <details>
@@ -237,8 +233,6 @@ print(longest_prefix(['flower', 'flow']))
 </details>
 
 ____
-
-## Last word length
 
 <details>
   <summary>Get the last word length (exluding spaces)</summary>
@@ -290,7 +284,7 @@ print(last_world_length("    "))
 </details>
 
 ____
-## Sub sequence
+
 <details>
    <summary>Find string (ex:abc) is subsequence in another string(ahfbc)</summary>
    <details>
@@ -330,4 +324,65 @@ print(is_subsequence("abc","ahgbc"))
 print(is_subsequence("abc","ahgb"))
 ```
   </details>
+</details>
+
+___
+
+<details>
+   <summary> Roman to Decimal</summary>
+
+   <details>
+    <summary>Logic</summary>
+
+```python
+#   Convert Roman number to Decimal
+#   VII  -> 7
+#   IV   -> 4
+#   Strategy
+#       -> Keep a map of roman numbers to decimal
+#               I -> 1 , V -> 5, X -> 10
+#       -> Walk thgough the digits and get decimal and add it to total
+#       -> Some special numbers like IV makes the number to subtract
+#       -> From current look ahead and if the next number is big number
+#           -> Subtract the current number from the next number
+#           -> Move on from next number
+```
+
+   </details>
+
+   <details>
+    <summary>Code</summary>
+
+```python
+def roman_decimal(str : str) -> int:
+    total = 0
+    
+    roman_map = {
+        'I' : 1,
+        'V' : 5,
+        'X' : 10
+    }
+    
+    i = 0
+    while i < len(str):
+        # todo: check for invalid characters.
+        current = roman_map[str[i]]
+        # look at head
+        if i < len(str)-1 and roman_map[str[i+1]] > current:
+            current = roman_map[str[i+1]]-current
+            i += 1
+        i += 1
+        total += current
+        
+    return total
+        
+
+print('VII->' , roman_decimal("VII"))
+print("XVI->" , roman_decimal("XVI"))
+print("IV->" ,roman_decimal("IV"))
+print("IXV->" , roman_decimal("IXV"))
+
+```
+   </details>
+
 </details>
