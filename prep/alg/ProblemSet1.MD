@@ -236,3 +236,55 @@ print(longest_prefix(['flower', 'flow']))
   </details>
 </details>
 
+____
+
+## Last word length
+
+<details>
+  <summary>Get the last word length (exluding spaces)</summary>
+
+   <details>
+      <summary>Logic</summary>
+
+```python
+# go through backwards of string using (range(start,stop,step))
+# skip to the first non white space in reverse
+# In next loop keep counting till white space occurs
+# return count
+```
+
+   </details>
+
+  <details>
+
+   <summary>Code</summary>
+
+```python
+def last_world_length(str1 : str) -> int:
+    count = 0
+    str_length = len(str1)-1
+    
+    # Skip to up to non white space
+    for i in range(len(str1)-1,-1,-1):
+        if str1[i] != ' ':
+            break
+        str_length -= 1
+            
+    for i in range(str_length,-1,-1):
+        if str1[i] == ' ':
+            return count
+        count += 1
+    return count
+
+print(last_world_length("Hello World123   "))
+print(last_world_length("Hello World123"))
+print(last_world_length("Hello"))
+print(last_world_length("    "))
+
+```
+
+
+
+  </details>
+
+</details>
