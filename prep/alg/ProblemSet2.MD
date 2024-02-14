@@ -54,3 +54,62 @@ print(two_sum_with_map([3,2,4], 6))
 ```
   </details>
 </details>
+
+____
+
+<details>
+  <summary>Remove duplicate in sorted array</summary>
+
+  <details>
+      <summary>Logic</summary>
+  </details>
+
+```python
+# remove duplicate in sorted array
+# [0,0,1]  -> [0,1,_]
+
+# Logic
+# prev = first element
+# [0,0,0,1,2]
+# 2 indices , i,j
+# keep moving j till num[i] != num[j]
+# copy j to i+
+# move i
+# repeat
+
+# [0,0,0,1,2]
+# i =0 , j =3
+# [0,1,0,1,2]
+# [0,1,2,1,2]
+
+# [1,2,3]
+# i=0, j=1
+```
+  <details>
+      <summary>Code</summary>
+
+```python
+def remove_duplicate_in_sort(nums : list[int]) -> int:
+    cur = nums[0]
+    
+    i=0
+    size = 1
+    for j in range(1,len(nums)):
+        if nums[j] != nums[i]: 
+            i += 1
+            nums[i] = nums[j]
+            size += 1
+            
+    print(nums)
+    return size            
+            
+
+print(remove_duplicate_in_sort([0,0,0,1,2]))
+print(remove_duplicate_in_sort([0,0,1,1,1]))
+
+
+```
+  </details>
+
+
+</details>
