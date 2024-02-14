@@ -467,3 +467,11 @@ print(majority_element(nums))
 
 
 </details>
+
+____
+
+<details>
+  <summary></summary>
+
+  [walkccc](https://walkccc.me/LeetCode/problems/0001/)
+</details>
