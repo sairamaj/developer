@@ -386,3 +386,84 @@ print("IXV->" , roman_decimal("IXV"))
    </details>
 
 </details>
+
+____
+
+<details>
+  <summary>Majority element</summary>
+
+  <details>
+    <summary>Problem</summary>
+
+```txt
+Given an array nums of size n, return the majority element.
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+```
+
+  </details>
+
+  <details>
+    <summary>Logic</summary>
+
+```python
+# majority element in array in O(1) space
+# [2,2,1,1,1,2,2]
+# 1st solution
+#   map: [2]->4  [1]->3
+#   O(n) space
+
+# to use O(1)
+# 2 -> 1 , 2-> 2, 1-> 1 1->0, 1->0, 2->1 2->2
+# 2 is majority element
+
+```
+  </details>
+
+
+  <details>
+    <summary>Code</summary>
+
+```python
+# O(n) space
+def majority_element_bymap( nums: list[int]) -> int:
+    
+    map = {}
+    count = 0
+    num = nums[0]
+    for i in range(len(nums)):
+        if nums[i] in map:
+            map[nums[i]] += 1
+        else:
+            map[nums[i]] = 1
+        if map[nums[i]] > count:
+            count = map[nums[i]]
+            num = nums[i]
+
+    print(map)
+    return num            
+
+# as the major element > n/2 
+# we can keep incrementing count as we see the same number
+# if we see different number we bring count 
+# if count > 0 then we get the number
+def majority_element( nums: list[int]) -> int:
+    ans = None
+    count = 0
+    
+    for num in nums:
+        if count == 0:
+            ans = num
+        count += (1 if num == ans else -1)   
+    return ans
+
+
+
+nums = [2,2,1,1,1,1,1,1,1,1,2,2,3,3,2,2]
+print(majority_element_bymap(nums))
+print(majority_element(nums))
+```
+  </details>
+
+
+</details>
