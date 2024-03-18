@@ -1,5 +1,5 @@
 ## Context
-While testing Unified Login integration POC , Azure box is giving SSL error, when getting configuration from OAuth2 server programmatically. The same URL works when browsed through google chrome.
+SSL error, when getting configuration from OAuth2 server programmatically. The same URL works when browsed through google chrome.
 
 ![issue](./issue.png)
 
