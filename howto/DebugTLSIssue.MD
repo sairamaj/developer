@@ -5,7 +5,7 @@ While testing Unified Login integration POC , Azure box is giving SSL error, whe
 
 ## Details
 * The certificate seems to be ok when browsed through chrome
-* The URL [well-known/openidconfiguration](https://corilliantest.fiserv.io/authentication/.well-known/openid-configuration) works through chrome
+* The URL [well-known/openidconfiguration](https://oauth2/authentication/.well-known/openid-configuration) works through chrome
 * The same URL does not work through powershell scripts
 
 ## Steps
@@ -13,7 +13,7 @@ While testing Unified Login integration POC , Azure box is giving SSL error, whe
 Here are the steps to debug using Wireshark
 
 * Install WireShark
-* Get the ip address of _corilliantest.fiserv.io_
+* Get the ip address of _<website>_
 * Use the filter in WireShark
 * Run through Chrome browser (_working_)
   * Capture the WireShark
