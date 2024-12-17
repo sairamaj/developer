@@ -39,7 +39,7 @@ documents = [
 ]
 
 # Example search query
-query = "quick jump"
+query = "not available"
 indices, distances = search_documents(query, model, index)
 
 # Display the results
