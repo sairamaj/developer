@@ -1,5 +1,6 @@
 import spacy
 from termcolor import colored
+# python -m spacy download en_core_web_sm
 
 # Load the spaCy model for English
 nlp = spacy.load("en_core_web_sm")
@@ -20,9 +21,12 @@ label_colors = {
 
 print([(w.text, w.pos_) for w in doc])
 
+str = ", ".join([f"{w.text}, {w.pos_})" for w in doc])
+print(str)
+
 print('-------------------------')
 # Print entities with color coding
-for ent in doc.ents:
-    # Get the color for the entity label
-    color = label_colors.get(ent.label_, "white")  # Default color if not defined
-    print(colored(f"{ent.text} ({ent.label_})", color))
+# for ent in doc.ents:
+    # # Get the color for the entity label
+    # color = label_colors.get(ent.label_, "white")  # Default color if not defined
+    # print(colored(f"{ent.text} ({ent.label_})", color))
